@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - EcoPure Cleaning Services</title>
+    <meta name="description" content="Frequently asked questions about eco-friendly cleaning services. Learn about our green products, safety, booking process, and more.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav class="container">
+            <a href="home.html" class="logo">EcoPure Cleaning Services</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="booking.html" class="cta-button">Get a Free Quote</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know about our eco-friendly cleaning services and green products.</p>
+            <div class="hero-buttons">
+                <a href="booking.html" class="cta-button">Book Our Services</a>
+                <a href="contact.html" class="secondary-button">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Browse by Category</h2>
+            <p class="section-subtitle">Quick answers to your questions about eco-cleaning</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div style="text-align: center; background: var(--light-gray); padding: 2rem; border-radius: 15px; cursor: pointer;" onclick="scrollToSection('general')">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">❓</div>
+                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">General Questions</h3>
+                    <p>Learn about EcoPure and our services</p>
+                </div>
+                
+                <div style="text-align: center; background: var(--light-gray); padding: 2rem; border-radius: 15px; cursor: pointer;" onclick="scrollToSection('products')">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🌿</div>
+                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Green Products</h3>
+                    <p>Information about our eco-friendly products</p>
+                </div>
+                
+                <div style="text-align: center; background: var(--light-gray); padding: 2rem; border-radius: 15px; cursor: pointer;" onclick="scrollToSection('safety')">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Safety & Health</h3>
+                    <p>Safety information for families and pets</p>
+                </div>
+                
+                <div style="text-align: center; background: var(--light-gray); padding: 2rem; border-radius: 15px; cursor: pointer;" onclick="scrollToSection('booking')">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📅</div>
+                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Booking & Pricing</h3>
+                    <p>How to book and pricing information</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Questions -->
+    <section class="features" id="general">
+        <div class="container">
+            <h2 class="section-title">General Questions</h2>
+            <p class="section-subtitle">About EcoPure Cleaning Services</p>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        Are eco-cleaning products effective?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">Yes! Modern eco-cleaning products are highly effective and have been scientifically formulated to match or exceed the cleaning power of traditional chemical cleaners. Our plant-based products use natural enzymes and surfactants that break down dirt, grime, and bacteria just as effectively as harsh chemicals, but without the toxic side effects. We've tested our products extensively and they consistently deliver professional-grade results.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        What makes EcoPure different from other cleaning services?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">EcoPure is exclusively focused on eco-friendly cleaning with certified green products, trained specialists in sustainable techniques, and a commitment to environmental responsibility. We're EPA Safer Choice certified, use only plant-based products, and maintain carbon-neutral operations. Our team receives specialized training in green cleaning methods, and we provide detailed environmental impact reports to our clients.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        How long have you been in business?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">EcoPure Cleaning Services was founded in 2016 with a mission to provide exceptional cleaning services while protecting the environment. We've been serving the California Bay Area for over 8 years and have completed more than 50,000 eco-friendly cleanings for residential and commercial clients.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        What areas do you serve?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">We primarily serve the California Bay Area including San Francisco, Oakland, San Jose, Berkeley, Marin County, and surrounding areas. We're continuously expanding our service area, so please contact us if you're outside our primary service region - we may be able to accommodate your needs or recommend a trusted partner.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Green Products Questions -->
+    <section class="services" id="products">
+        <div class="container">
+            <h2 class="section-title">Green Products & Effectiveness</h2>
+            <p class="section-subtitle">Learn about our eco-friendly cleaning solutions</p>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        What ingredients are in your eco-cleaning products?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">Our products contain plant-derived surfactants from coconut and corn, natural citric acids, essential oils (citrus, tea tree, lavender), plant-based enzymes, and mineral-based cleaners. All ingredients are biodegradable, non-toxic, and free from harsh chemicals like ammonia, chlorine, phosphates, and petroleum-based solvents.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        Do your products have strong chemical smells?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">No, our products have pleasant, natural scents from essential oils like citrus, lavender, and tea tree. They leave your space smelling fresh and clean without the harsh chemical odors associated with traditional cleaners. Many clients comment on how much better their home smells after our eco-cleaning service.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        Are your products certified and tested?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">Yes! All our products are EPA Safer Choice certified, USDA Certified BioBased, and Leaping Bunny certified (cruelty-free). They undergo rigorous third-party testing for effectiveness, safety, and environmental impact. We also conduct regular in-house testing to ensure they meet our high standards for cleaning performance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        Can I buy your products for my own use?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">Currently, our professional-grade products are exclusively used by our trained cleaning specialists to ensure proper application and maximum effectiveness. However, we're developing a consumer line that will be available soon. In the meantime, we can recommend excellent retail eco-friendly products for your use between our professional cleanings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Questions -->
+    <section class="features" id="safety">
+        <div class="container">
+            <h2 class="section-title">Safety & Health</h2>
+            <p class="section-subtitle">Keeping your family and pets safe</p>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        Are your products safe for pets and children?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">Absolutely! Our products are specifically formulated to be safe for children and pets. They're free from toxic chemicals, harsh fumes, and allergens that could harm your little ones. All our products are baby-safe and pet-safe certified, making them ideal for households with sensitive family members. Many families with children who have allergies or asthma report significant improvement after switching to our eco-cleaning services.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        Do you bring your own cleaning supplies?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">Yes, we bring all our own professional eco-friendly cleaning products, equipment, and supplies. This includes HEPA-filter vacuums, microfiber cloths, natural sponges, and all our green cleaning solutions. You don't need to provide anything - we come fully prepared to deliver exceptional eco-cleaning results.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        Are your cleaning staff background checked and insured?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">Yes, all our cleaning specialists undergo comprehensive background checks, are fully insured, and bonded. They also receive extensive training in eco-friendly cleaning techniques, safety protocols, and customer service. We maintain high standards for our team to ensure your peace of mind and exceptional service quality.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        What if someone in my home has allergies or chemical sensitivities?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">Our eco-friendly products are ideal for people with allergies and chemical sensitivities. We offer fragrance-free options and can customize our cleaning approach to accommodate specific sensitivities. Our HEPA-filter vacuums and natural cleaning methods actually help reduce allergens and improve indoor air quality, making our services particularly beneficial for allergy sufferers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Pricing Questions -->
+    <section class="services" id="booking">
+        <div class="container">
+            <h2 class="section-title">Booking & Pricing</h2>
+            <p class="section-subtitle">How to book and understand our pricing</p>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        Is eco-cleaning more expensive than traditional cleaning?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">While eco-cleaning may have a slightly higher upfront cost, the value is exceptional. Our prices are competitive with high-quality traditional cleaning services, and you get the added benefits of improved health, environmental protection, and superior cleaning results. Many clients find that the long-term health benefits and environmental impact make eco-cleaning an excellent investment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        How do I book a cleaning service?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">Booking is easy! You can book online through our website booking form, call us directly at (555) 123-4567, or email info@ecopurecleaning.com. We'll discuss your specific needs, provide a detailed quote, and schedule a convenient time for your eco-cleaning service. The entire process typically takes less than 10 minutes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        How often should I book eco-cleaning?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">Frequency depends on your needs and lifestyle. For most homes, bi-weekly cleaning maintains excellent results. Weekly service is ideal for busy families or those with pets. Monthly deep cleans work well for smaller households or as maintenance between more frequent cleanings. We'll help you determine the best schedule based on your specific situation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        What is your cancellation policy?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">We understand that plans change. Cancellations made at least 24 hours in advance receive a full refund or can be rescheduled at no charge. Cancellations within 24 hours may incur a 50% fee. We'll always work with you to find the best solution when unexpected circumstances arise.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background: none; border: none; cursor: pointer; font-size: 1.1rem; font-weight: 600; color: var(--primary-green); border-bottom: 1px solid var(--medium-gray);" onclick="toggleFAQ(this)">
+                        Do you offer discounts for regular service?
+                        <span style="float: right;">+</span>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 1rem 0; line-height: 1.6;">Yes! We offer discounts for weekly and bi-weekly regular service clients. Weekly service receives a 15% discount, and bi-weekly service receives a 10% discount. We also offer special promotions for first-time clients and seasonal discounts throughout the year. Ask about our loyalty program for additional benefits.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions -->
+    <section class="features" style="background: linear-gradient(135deg, var(--light-green), var(--eco-blue)); color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: white; margin-bottom: 1rem;">Still Have Questions?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Our friendly team is here to help with any additional questions about our eco-friendly cleaning services.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="cta-button" style="background: white; color: var(--primary-green);">Contact Us</a>
+                <a href="tel:555-123-4567" class="secondary-button" style="border-color: white; color: white;">Call (555) 123-4567</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About EcoPure</h3>
+                    <p>Your trusted partner in sustainable cleaning solutions. We're committed to providing exceptional cleaning services while protecting our planet.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Residential Cleaning</a></li>
+                        <li><a href="services.html">Commercial Cleaning</a></li>
+                        <li><a href="services.html">Deep Cleaning</a></li>
+                        <li><a href="services.html">Move-In/Out Cleaning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="green-products.html">Our Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>📞 (555) 123-4567</li>
+                        <li>📧 info@ecopurecleaning.com</li>
+                        <li>📍 Serving California Bay Area</li>
+                        <li>🕐 Mon-Fri: 8AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 EcoPure Cleaning Services. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                    <a href="privacy-policy.html" style="color: inherit; margin: 0 10px;">Privacy Policy</a> |
+                    <a href="terms.html" style="color: inherit; margin: 0 10px;">Terms & Conditions</a> |
+                    <a href="environmental-commitment.html" style="color: inherit; margin: 0 10px;">Environmental Commitment</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle">💬</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <span>🌱 EcoPure Assistant</span>
+                <button class="chatbot-close" id="chatbotClose">✕</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    <div class="message-bubble">Hello! I'm here to help you with any questions about our eco-friendly cleaning services. How can I assist you today?</div>
+                </div>
+            </div>
+            <div class="chatbot-input-container">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message...">
+                <div class="chatbot-quick-buttons">
+                    <button class="quick-button" data-question="services">What services do you offer?</button>
+                    <button class="quick-button" data-question="safe">Are your products safe?</button>
+                    <button class="quick-button" data-question="booking">How do I book?</button>
+                    <button class="quick-button" data-question="pricing">What are your prices?</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    
+    <script>
+        // FAQ Toggle Function
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const allQuestions = document.querySelectorAll('.faq-question');
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            
+            // Close all other FAQs
+            allQuestions.forEach(q => {
+                if (q !== button) {
+                    q.querySelector('span').textContent = '+';
+                }
+            });
+            
+            allAnswers.forEach(a => {
+                if (a !== answer) {
+                    a.style.maxHeight = '0';
+                }
+            });
+            
+            // Toggle current FAQ
+            if (answer.style.maxHeight === '0px' || !answer.style.maxHeight) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                button.querySelector('span').textContent = '-';
+            } else {
+                answer.style.maxHeight = '0';
+                button.querySelector('span').textContent = '+';
+            }
+        }
+        
+        // Scroll to Section Function
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        
+        // Initialize FAQ answers as hidden
+        document.addEventListener('DOMContentLoaded', function() {
+            const answers = document.querySelectorAll('.faq-answer');
+            answers.forEach(answer => {
+                answer.style.maxHeight = '0';
+            });
+        });
+    </script>
+</body>
+</html>

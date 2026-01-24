@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Eco-Friendly Cleaning Service - EcoPure Cleaning Services</title>
+    <meta name="description" content="Schedule your eco-friendly cleaning service online. Easy booking, flexible scheduling, and professional green cleaning for your home or business.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav class="container">
+            <a href="home.html" class="logo">EcoPure Cleaning Services</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="booking.html" class="active">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="tel:555-123-4567" class="cta-button">Call (555) 123-4567</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Book Your Eco-Friendly Cleaning Service</h1>
+            <p>Schedule your professional green cleaning service in just a few simple steps. Safe, effective, and convenient.</p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="services">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="success-message" id="successMessage">
+                    🌱 Thank you for your booking request! We'll contact you within 24 hours to confirm your eco-friendly cleaning service.
+                </div>
+
+                <form id="bookingForm" style="background: var(--light-gray); padding: 3rem; border-radius: 20px;">
+                    <h2 style="text-align: center; color: var(--primary-green); margin-bottom: 2rem;">Service Booking Form</h2>
+                    
+                    <!-- Personal Information -->
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Details -->
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Service Details</h3>
+                        
+                        <div class="form-group">
+                            <label for="serviceType">Service Type *</label>
+                            <select id="serviceType" name="serviceType" required>
+                                <option value="">Select a service</option>
+                                <option value="residential-regular">Regular Residential Cleaning</option>
+                                <option value="residential-deep">Deep Residential Cleaning</option>
+                                <option value="residential-move">Move-In/Move-Out Cleaning</option>
+                                <option value="commercial-regular">Regular Commercial Cleaning</option>
+                                <option value="commercial-deep">Deep Commercial Cleaning</option>
+                                <option value="post-construction">Post-Construction Cleaning</option>
+                                <option value="event-cleanup">Event Cleanup</option>
+                                <option value="green-disinfection">Green Disinfection Service</option>
+                                <option value="allergy-safe">Allergy-Safe Cleaning</option>
+                                <option value="upholstery">Upholstery & Mattress Cleaning</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="propertyType">Property Type *</label>
+                            <select id="propertyType" name="propertyType" required>
+                                <option value="">Select property type</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="house">House</option>
+                                <option value="villa">Villa</option>
+                                <option value="office">Office</option>
+                                <option value="retail">Retail Store</option>
+                                <option value="clinic">Clinic/Healthcare</option>
+                                <option value="school">Educational Facility</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bedrooms">Number of Bedrooms</label>
+                                <input type="number" id="bedrooms" name="bedrooms" min="0" max="10" placeholder="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="bathrooms">Number of Bathrooms</label>
+                                <input type="number" id="bathrooms" name="bathrooms" min="0" max="10" placeholder="0">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="squareFootage">Approximate Square Footage</label>
+                            <input type="number" id="squareFootage" name="squareFootage" min="0" placeholder="e.g., 1500">
+                        </div>
+                    </div>
+
+                    <!-- Scheduling -->
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Preferred Schedule</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="preferredDate">Preferred Date *</label>
+                                <input type="date" id="preferredDate" name="preferredDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="preferredTime">Preferred Time *</label>
+                                <select id="preferredTime" name="preferredTime" required>
+                                    <option value="">Select time</option>
+                                    <option value="morning">Morning (8AM - 12PM)</option>
+                                    <option value="afternoon">Afternoon (12PM - 4PM)</option>
+                                    <option value="evening">Evening (4PM - 6PM)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="frequency">Service Frequency</label>
+                            <select id="frequency" name="frequency">
+                                <option value="one-time">One-Time Service</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="bi-weekly">Bi-Weekly</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="custom">Custom Schedule</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Additional Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="specialInstructions">Special Instructions or Requests</label>
+                            <textarea id="specialInstructions" name="specialInstructions" rows="4" placeholder="Please let us know about any specific cleaning needs, areas of concern, pets, allergies, or special instructions..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="accessInfo">Property Access Information</label>
+                            <textarea id="accessInfo" name="accessInfo" rows="3" placeholder="Gate codes, parking instructions, how to access the property, etc."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="bringSupplies" name="bringSupplies" checked>
+                                Please bring eco-friendly cleaning supplies
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="firstTime" name="firstTime">
+                                This is my first time using EcoPure Cleaning Services
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Submit -->
+                    <div style="margin-bottom: 2rem;">
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="terms" name="terms" required>
+                                I agree to the <a href="#" style="color: var(--primary-green);">Terms & Conditions</a> and understand that this is a booking request, not a confirmed appointment.
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="notifications" name="notifications" checked>
+                                I would like to receive confirmation and updates via email and text message.
+                            </label>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button type="submit" class="cta-button" style="font-size: 1.1rem; padding: 15px 40px;">Submit Booking Request</button>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--dark-gray);">
+                            We'll contact you within 24 hours to confirm your booking and provide a detailed quote.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Information -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">What Happens Next?</h2>
+            <p class="section-subtitle">Our simple booking process</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div style="text-align: center;">
+                    <div style="background: var(--primary-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">✓</div>
+                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Request Received</h3>
+                    <p>We'll review your booking request and contact you within 24 hours.</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="background: var(--primary-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">📞</div>
+                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Personal Consultation</h3>
+                    <p>We'll discuss your specific needs and provide a detailed quote.</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="background: var(--primary-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">📅</div>
+                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Schedule Confirmation</h3>
+                    <p>We'll confirm your appointment date and time that works best for you.</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="background: var(--primary-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">🌿</div>
+                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Eco Cleaning Service</h3>
+                    <p>Enjoy your professionally cleaned space using eco-friendly products!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Service -->
+    <section class="services" style="background: var(--light-gray);">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Need Emergency Cleaning Service?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">For urgent cleaning needs, call us directly for immediate assistance.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:555-123-4567" class="cta-button" style="background: var(--dark-green);">📞 Call Now: (555) 123-4567</a>
+                <a href="contact.html" class="secondary-button">Send Message</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About EcoPure</h3>
+                    <p>Your trusted partner in sustainable cleaning solutions. We're committed to providing exceptional cleaning services while protecting our planet.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Residential Cleaning</a></li>
+                        <li><a href="services.html">Commercial Cleaning</a></li>
+                        <li><a href="services.html">Deep Cleaning</a></li>
+                        <li><a href="services.html">Move-In/Out Cleaning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="green-products.html">Our Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>📞 (555) 123-4567</li>
+                        <li>📧 info@ecopurecleaning.com</li>
+                        <li>📍 Serving California Bay Area</li>
+                        <li>🕐 Mon-Fri: 8AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 EcoPure Cleaning Services. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                    <a href="privacy-policy.html" style="color: inherit; margin: 0 10px;">Privacy Policy</a> |
+                    <a href="terms.html" style="color: inherit; margin: 0 10px;">Terms & Conditions</a> |
+                    <a href="environmental-commitment.html" style="color: inherit; margin: 0 10px;">Environmental Commitment</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle">💬</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <span>🌱 EcoPure Assistant</span>
+                <button class="chatbot-close" id="chatbotClose">✕</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    <div class="message-bubble">Hello! I'm here to help you with any questions about our eco-friendly cleaning services. How can I assist you today?</div>
+                </div>
+            </div>
+            <div class="chatbot-input-container">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message...">
+                <div class="chatbot-quick-buttons">
+                    <button class="quick-button" data-question="services">What services do you offer?</button>
+                    <button class="quick-button" data-question="safe">Are your products safe?</button>
+                    <button class="quick-button" data-question="booking">How do I book?</button>
+                    <button class="quick-button" data-question="pricing">What are your prices?</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    
+    <script>
+        // Booking Form Validation and Submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'serviceType', 'propertyType', 'preferredDate', 'preferredTime'];
+            let isValid = true;
+            
+            requiredFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+            
+            // Email validation
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('email').style.borderColor = 'red';
+                isValid = false;
+            }
+            
+            // Phone validation
+            const phone = document.getElementById('phone').value.replace(/\D/g, '');
+            if (phone.length < 10) {
+                document.getElementById('phone').style.borderColor = 'red';
+                isValid = false;
+            }
+            
+            // Terms checkbox validation
+            const termsCheckbox = document.getElementById('terms');
+            if (!termsCheckbox.checked) {
+                alert('Please agree to the Terms & Conditions to proceed.');
+                return;
+            }
+            
+            if (isValid) {
+                // Show success message
+                document.getElementById('successMessage').classList.add('show');
+                
+                // Scroll to success message
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+                
+                // Reset form
+                this.reset();
+                
+                // Hide success message after 10 seconds
+                setTimeout(() => {
+                    document.getElementById('successMessage').classList.remove('show');
+                }, 10000);
+                
+                // In a real application, you would send this data to a server
+                console.log('Booking form submitted successfully');
+            } else {
+                alert('Please fill in all required fields correctly.');
+            }
+        });
+        
+        // Phone number formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    value = `(${value}`;
+                } else if (value.length <= 6) {
+                    value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                } else {
+                    value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                }
+            }
+            e.target.value = value;
+        });
+        
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('preferredDate').setAttribute('min', today);
+        
+        // Show/hide bedroom/bathroom fields based on property type
+        document.getElementById('propertyType').addEventListener('change', function() {
+            const residentialTypes = ['apartment', 'house', 'villa'];
+            const bedroomFields = document.getElementById('bedrooms').parentElement;
+            const bathroomFields = document.getElementById('bathrooms').parentElement;
+            
+            if (residentialTypes.includes(this.value)) {
+                bedroomFields.style.display = 'block';
+                bathroomFields.style.display = 'block';
+            } else {
+                bedroomFields.style.display = 'none';
+                bathroomFields.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
