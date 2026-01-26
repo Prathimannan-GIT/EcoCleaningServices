@@ -221,11 +221,18 @@ header nav {
 
 .auth-links .cta-button,
 .auth-links .secondary-button {
-    padding: 6px 12px;
+    padding: 6px 14px;
     font-size: 0.85rem;
     white-space: nowrap;
     border-radius: 20px;
     font-weight: 500;
+    line-height: 1.2;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
 .auth-links .secondary-button {
@@ -250,24 +257,18 @@ header nav {
     border-color: var(--dark-green);
 }
 
-.primary-cta {
+.primary-cta-button {
     background: var(--primary-green);
     color: var(--white);
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
     cursor: pointer;
-    display: inline-block;
-    white-space: nowrap;
-    flex-shrink: 0;
-}
-
-.primary-cta:hover {
-    background: var(--dark-green);
-    transform: translateY(-2px);
+    display: inline-flex;
+    align-items: center;
     box-shadow: var(--shadow-hover);
 }
 
@@ -315,7 +316,13 @@ header.simplified .mobile-menu-toggle {
     font-weight: 600;
     transition: all 0.3s ease;
     cursor: pointer;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    min-height: 44px;
+    box-sizing: border-box;
+    white-space: nowrap;
 }
 
 .secondary-button:hover {
@@ -622,12 +629,25 @@ footer {
     
     .auth-links .cta-button,
     .auth-links .secondary-button {
-        padding: 5px 10px;
+        padding: 5px 12px;
         font-size: 0.8rem;
+        min-height: 28px;
     }
     
     .header-actions {
         margin-left: 0.75rem;
+    }
+    
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        min-height: 40px;
+    }
+    
+    .secondary-button {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+        min-height: 40px;
     }
 }
 
@@ -722,6 +742,19 @@ footer {
     .auth-links .secondary-button {
         padding: 8px 16px;
         font-size: 0.9rem;
+        min-height: 36px;
+    }
+    
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 1rem;
+        min-height: 44px;
+    }
+    
+    .secondary-button {
+        padding: 10px 18px;
+        font-size: 1rem;
+        min-height: 44px;
     }
     
     .hero h1 {
