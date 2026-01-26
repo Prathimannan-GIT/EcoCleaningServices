@@ -10,17 +10,23 @@
 <body>
     <!-- Header Navigation -->
     <header>
-        <nav class="container">
+        <nav>
             <a href="index.html" class="logo">EcoPure Cleaning Services</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="booking.html">Book Now</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="header-actions">
+                    <div class="auth-links">
+                        <a href="login.html" class="secondary-button">Login</a>
+                        <a href="register.html" class="cta-button">Register</a>
+                    </div>
+                </li>
             </ul>
-            <a href="tel:555-123-4567" class="cta-button">Call Now</a>
             <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
         </nav>
     </header>
@@ -446,6 +452,7 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
     <script src="js/chatbot.js"></script>
     
@@ -469,40 +476,26 @@
             });
             
             // Email validation
-            const email = document.getElementById('contactEmail').value;
+            const email = document.getElementById('email').value;
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                document.getElementById('contactEmail').style.borderColor = 'red';
+                document.getElementById('email').style.borderColor = 'red';
                 isValid = false;
-            }
-            
-            // Phone validation (if provided)
-            const phone = document.getElementById('contactPhone').value;
-            if (phone && phone.replace(/\D/g, '').length < 10) {
-                document.getElementById('contactPhone').style.borderColor = 'red';
-                isValid = false;
-            }
-            
-            // Terms checkbox validation
-            const termsCheckbox = document.getElementById('contactTerms');
-            if (!termsCheckbox.checked) {
-                alert('Please agree to the Privacy Policy to proceed.');
-                return;
             }
             
             if (isValid) {
                 // Show success message
-                document.getElementById('contactSuccessMessage').classList.add('show');
+                document.getElementById('successMessage').classList.add('show');
                 
                 // Scroll to success message
-                document.getElementById('contactSuccessMessage').scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
                 
                 // Reset form
                 this.reset();
                 
                 // Hide success message after 10 seconds
                 setTimeout(() => {
-                    document.getElementById('contactSuccessMessage').classList.remove('show');
+                    document.getElementById('successMessage').classList.remove('show');
                 }, 10000);
                 
                 // In a real application, you would send this data to a server
@@ -512,20 +505,6 @@
             }
         });
         
-        // Phone number formatting
-        document.getElementById('contactPhone').addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 0) {
-                if (value.length <= 3) {
-                    value = `(${value}`;
-                } else if (value.length <= 6) {
-                    value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
-                } else {
-                    value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
-                }
-            }
-            e.target.value = value;
-        });
         
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

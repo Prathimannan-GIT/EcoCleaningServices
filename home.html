@@ -10,17 +10,23 @@
 <body>
     <!-- Header Navigation -->
     <header>
-        <nav class="container">
+        <nav>
             <a href="index.html" class="logo">EcoPure Cleaning Services</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="booking.html">Book Now</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="header-actions">
+                    <div class="auth-links">
+                        <a href="login.html" class="secondary-button">Login</a>
+                        <a href="register.html" class="cta-button">Register</a>
+                    </div>
+                </li>
             </ul>
-            <a href="booking.html" class="cta-button">Get a Free Quote</a>
             <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
         </nav>
     </header>
@@ -44,7 +50,7 @@
             <p class="section-subtitle">Your trusted partner in sustainable cleaning solutions</p>
             
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card highlight">
                     <div class="feature-icon">🌿</div>
                     <h3>Certified Green Products</h3>
                     <p>We use only EPA-certified eco-friendly cleaning products that are safe for your family and the environment.</p>
@@ -56,7 +62,7 @@
                     <p>Our non-toxic cleaning solutions ensure your home remains safe for your little ones and furry friends.</p>
                 </div>
                 
-                <div class="feature-card">
+                <div class="feature-card highlight">
                     <div class="feature-icon">👨‍🔧</div>
                     <h3>Trained Eco Cleaning Staff</h3>
                     <p>Our professional cleaners are certified in green cleaning techniques and committed to excellence.</p>
@@ -74,7 +80,7 @@
                     <p>No hidden fees or surprise charges. Clear, upfront pricing for all our eco-cleaning services.</p>
                 </div>
                 
-                <div class="feature-card">
+                <div class="feature-card highlight">
                     <div class="feature-icon">✅</div>
                     <h3>Satisfaction Guarantee</h3>
                     <p>We stand behind our work with a 100% satisfaction guarantee on all cleaning services.</p>
@@ -279,6 +285,7 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
     <script src="js/chatbot.js"></script>
 </body>

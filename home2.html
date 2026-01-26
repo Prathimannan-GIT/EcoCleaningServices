@@ -3,226 +3,533 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoPure Cleaning Services - A Cleaner Home Without Compromising the Planet</title>
-    <meta name="description" content="Transform your home with eco-friendly cleaning services. Safe for your family, gentle on the planet. Book your sustainable cleaning today.">
+    <title>EcoPure Cleaning Services - Green Living Starts Here</title>
+    <meta name="description" content="Transform your space with our revolutionary eco-cleaning solutions. Experience the future of sustainable cleaning.">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hero-alt {
+            background: linear-gradient(135deg, #1b5e20, #4caf50, #8bc34a);
+            color: var(--white);
+            padding: 140px 0 100px;
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-alt::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><pattern id="eco-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20 5 Q10 20 20 35 Q30 20 20 5" fill="rgba(255,255,255,0.05)"/><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="200" height="200" fill="url(%23eco-pattern)"/></svg>');
+            background-size: 200px 200px;
+            animation: floatPattern 20s infinite linear;
+        }
+        
+        @keyframes floatPattern {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(40px, 40px); }
+        }
+        
+        .hero-alt h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-alt p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .eco-stats {
+            background: linear-gradient(135deg, #e8f5e8, #f1f8e9);
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .eco-stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(76,175,80,0.1)" stroke-width="1"/><circle cx="50" cy="50" r="20" fill="none" stroke="rgba(76,175,80,0.08)" stroke-width="1"/></svg>');
+            background-size: 100px 100px;
+            opacity: 0.5;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stat-card {
+            text-align: center;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-green), var(--accent-green));
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+        
+        .green-technology {
+            background: linear-gradient(135deg, #f8fdf8, #e8f5e8);
+            padding: 80px 0;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .tech-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .tech-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(76,175,80,0.05), rgba(139,195,74,0.05));
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .tech-card:hover::after {
+            opacity: 1;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .tech-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .eco-lifestyle {
+            background: linear-gradient(135deg, var(--eco-blue), var(--primary-green));
+            color: white;
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .lifestyle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .lifestyle-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .lifestyle-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+        
+        .lifestyle-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sustainability-metrics {
+            background: linear-gradient(135deg, #f1f8e9, #dcedc8);
+            padding: 80px 0;
+        }
+        
+        .metrics-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        
+        .metrics-content h3 {
+            color: var(--primary-green);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .metrics-content p {
+            color: var(--dark-gray);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .metrics-visual {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .metric-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #f8fdf8, #e8f5e8);
+            border-radius: 10px;
+        }
+        
+        .metric-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .metric-text h4 {
+            color: var(--primary-green);
+            margin-bottom: 0.25rem;
+        }
+        
+        .metric-text p {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .community-section {
+            background: linear-gradient(135deg, var(--primary-green), var(--eco-blue));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .community-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .community-stat {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .community-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .community-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-alt h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-alt p {
+                font-size: 1.1rem;
+            }
+            
+            .metrics-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Navigation -->
     <header>
-        <nav class="container">
+        <nav>
             <a href="index.html" class="logo">EcoPure Cleaning Services</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="booking.html">Book Now</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="header-actions">
+                    <div class="auth-links">
+                        <a href="login.html" class="secondary-button">Login</a>
+                        <a href="register.html" class="cta-button">Register</a>
+                    </div>
+                </li>
             </ul>
-            <a href="booking.html" class="cta-button">Schedule Eco Cleaning</a>
             <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
         </nav>
     </header>
 
-    <!-- Hero Section - Different Layout -->
-    <section class="hero" style="background: linear-gradient(135deg, #2d7a2d, #8bc34a);">
+    <!-- Hero Section - Alternative -->
+    <section class="hero-alt">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-                <div style="text-align: left;">
-                    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">A Cleaner Home Without Compromising the Planet</h1>
-                    <p style="font-size: 1.1rem; margin-bottom: 2rem;">Experience the perfect balance of pristine cleanliness and environmental responsibility. Our eco-friendly cleaning services deliver exceptional results while protecting what matters most.</p>
-                    <div class="hero-buttons" style="justify-content: flex-start;">
-                        <a href="booking.html" class="cta-button">Schedule Eco Cleaning</a>
-                        <a href="green-products.html" class="secondary-button">Learn About Our Green Products</a>
-                    </div>
+            <h1>Green Living Starts Here</h1>
+            <p>Discover the revolutionary approach to eco-cleaning that transforms your space while protecting our planet. Join thousands who've made the switch to sustainable cleaning.</p>
+            <div class="hero-buttons">
+                <a href="booking.html" class="cta-button">Start Your Green Journey</a>
+                <a href="green-products.html" class="secondary-button">Explore Our Technology</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Environmental Impact Stats -->
+    <section class="eco-stats">
+        <div class="container">
+            <h2 class="section-title">Our Environmental Impact</h2>
+            <p class="section-subtitle">Making a measurable difference, one cleaning at a time</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">2.5M</div>
+                    <div class="stat-label">Gallons of Water Saved</div>
                 </div>
-                <div style="text-align: center;">
-                    <div style="background: rgba(255,255,255,0.1); border-radius: 20px; padding: 3rem; backdrop-filter: blur(10px);">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">🌍</div>
-                        <h3 style="color: white; margin-bottom: 1rem;">100% Eco-Friendly</h3>
-                        <p style="color: rgba(255,255,255,0.9);">Join thousands making the switch to sustainable cleaning</p>
+                <div class="stat-card">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Reduction in Chemical Usage</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50K</div>
+                    <div class="stat-label">Trees Planted</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Biodegradable Products</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Green Cleaning Technology -->
+    <section class="green-technology">
+        <div class="container">
+            <h2 class="section-title">Advanced Green Technology</h2>
+            <p class="section-subtitle">Cutting-edge solutions for sustainable cleaning</p>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">🔬</div>
+                    <h3>Plant-Based Formulas</h3>
+                    <p>Our proprietary plant-based cleaning formulas deliver superior results without harsh chemicals, ensuring safety for your family and pets.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">💧</div>
+                    <h3>Water Conservation Systems</h3>
+                    <p>Advanced cleaning techniques that use up to 70% less water while maintaining exceptional cleaning standards.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">⚡</div>
+                    <h3>Energy-Efficient Equipment</h3>
+                    <p>State-of-the-art cleaning equipment that reduces energy consumption while maximizing cleaning effectiveness.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🌿</div>
+                    <h3>Carbon Neutral Operations</h3>
+                    <p>Every cleaning service is carbon neutral through our partnership with environmental organizations and sustainable practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Eco-Friendly Lifestyle -->
+    <section class="eco-lifestyle">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Live the Eco-Friendly Lifestyle</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Simple changes for a sustainable future</p>
+            
+            <div class="lifestyle-grid">
+                <div class="lifestyle-card">
+                    <div class="lifestyle-icon">🏠</div>
+                    <h3>Green Home Habits</h3>
+                    <p>Learn daily practices that maintain a clean, healthy home using eco-friendly methods and products.</p>
+                </div>
+                <div class="lifestyle-card">
+                    <div class="lifestyle-icon">♻️</div>
+                    <h3>Waste Reduction</h3>
+                    <p>Discover how our cleaning methods minimize waste and promote recycling in your daily routine.</p>
+                </div>
+                <div class="lifestyle-card">
+                    <div class="lifestyle-icon">🌍</div>
+                    <h3>Environmental Education</h3>
+                    <p>Access resources and tips for living more sustainably beyond just cleaning practices.</p>
+                </div>
+                <div class="lifestyle-card">
+                    <div class="lifestyle-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family-Friendly Solutions</h3>
+                    <p>Safe, non-toxic cleaning solutions that protect the health of your entire family.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Sustainability Metrics -->
+    <section class="sustainability-metrics">
+        <div class="container">
+            <h2 class="section-title">Our Sustainability Commitment</h2>
+            <p class="section-subtitle">Transparent metrics driving our eco-friendly mission</p>
+            
+            <div class="metrics-container">
+                <div class="metrics-content">
+                    <h3>Measurable Environmental Impact</h3>
+                    <p>We track every aspect of our environmental footprint to ensure we're making a real difference. From water conservation to carbon reduction, our commitment to sustainability is backed by data and continuous improvement.</p>
+                    <p>Our comprehensive sustainability program includes regular audits, third-party certifications, and transparent reporting to hold ourselves accountable to the highest environmental standards.</p>
+                    <a href="environmental-commitment.html" class="cta-button">View Full Report</a>
+                </div>
+                <div class="metrics-visual">
+                    <div class="metric-item">
+                        <div class="metric-icon">💧</div>
+                        <div class="metric-text">
+                            <h4>Water Conservation</h4>
+                            <p>70% less water usage per cleaning</p>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-icon">🌱</div>
+                        <div class="metric-text">
+                            <h4>Organic Ingredients</h4>
+                            <p>100% plant-based cleaning agents</p>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-icon">📦</div>
+                        <div class="metric-text">
+                            <h4>Zero Waste Packaging</h4>
+                            <p>Recyclable and compostable materials</p>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-icon">🚗</div>
+                        <div class="metric-text">
+                            <h4>Green Transportation</h4>
+                            <p>Electric vehicles for service routes</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="features">
+    <!-- Section 5: Community Impact -->
+    <section class="community-section">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Simple steps to a cleaner, greener home</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="text-align: center; position: relative;">
-                    <div style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">1</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Choose Your Cleaning Service</h3>
-                    <p>Select from our range of eco-friendly cleaning services tailored to your specific needs, whether residential or commercial.</p>
-                </div>
+            <div class="community-content">
+                <h2 style="color: white; margin-bottom: 1rem;">Building a Greener Community</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Together, we're creating a movement toward sustainable living that extends beyond cleaning services.</p>
                 
-                <div style="text-align: center; position: relative;">
-                    <div style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">2</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Select Eco-Safe Products</h3>
-                    <p>Choose from our curated selection of plant-based, non-toxic cleaning products that are safe for your family and pets.</p>
-                </div>
-                
-                <div style="text-align: center; position: relative;">
-                    <div style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">3</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Schedule Your Slot</h3>
-                    <p>Pick a convenient time that works for your schedule. We offer flexible booking options to fit your lifestyle.</p>
-                </div>
-                
-                <div style="text-align: center; position: relative;">
-                    <div style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">4</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Professional Cleaning Visit</h3>
-                    <p>Our trained eco-cleaning professionals arrive with green products and equipment to transform your space.</p>
-                </div>
-                
-                <div style="text-align: center; position: relative;">
-                    <div style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">5</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Quality & Satisfaction Check</h3>
-                    <p>We ensure every corner is spotless and you're completely satisfied with our eco-friendly cleaning results.</p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="booking.html" class="cta-button">Get Started Today</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Story Section -->
-    <section class="services">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                <div>
-                    <h2 class="section-title" style="text-align: left;">Our Eco-Friendly Journey</h2>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Founded with a simple mission: to provide exceptional cleaning services while protecting our planet. We believe that a clean home shouldn't come at the expense of environmental health.</p>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Over the past decade, we've helped thousands of families and businesses make the switch to sustainable cleaning practices. Our team of certified eco-cleaning specialists uses only the finest plant-based products and proven green techniques.</p>
-                    <p style="margin-bottom: 2rem; line-height: 1.8;">Every service we deliver is a step toward a cleaner, healthier future for our community and our planet.</p>
-                    <div style="display: flex; gap: 1rem;">
-                        <a href="about.html" class="cta-button">Learn Our Story</a>
-                        <a href="green-products.html" class="secondary-button">Our Green Promise</a>
+                <div class="community-grid">
+                    <div class="community-stat">
+                        <div class="community-number">15K+</div>
+                        <div class="community-label">Eco-Conscious Homes</div>
+                    </div>
+                    <div class="community-stat">
+                        <div class="community-number">200+</div>
+                        <div class="community-label">Community Workshops</div>
+                    </div>
+                    <div class="community-stat">
+                        <div class="community-number">50K</div>
+                        <div class="community-label">Trees Planted</div>
+                    </div>
+                    <div class="community-stat">
+                        <div class="community-number">100%</div>
+                        <div class="community-label">Renewable Energy</div>
                     </div>
                 </div>
-                <div style="background: var(--light-gray); border-radius: 20px; padding: 2rem; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">🌱</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">10+ Years of Green Excellence</h3>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;">
-                        <div>
-                            <div style="font-size: 2rem; color: var(--primary-green); font-weight: bold;">50,000+</div>
-                            <div style="font-size: 0.9rem;">Eco Cleanings Completed</div>
-                        </div>
-                        <div>
-                            <div style="font-size: 2rem; color: var(--primary-green); font-weight: bold;">0%</div>
-                            <div style="font-size: 0.9rem;">Harsh Chemicals Used</div>
-                        </div>
-                        <div>
-                            <div style="font-size: 2rem; color: var(--primary-green); font-weight: bold;">100%</div>
-                            <div style="font-size: 0.9rem;">Biodegradable Products</div>
-                        </div>
-                        <div>
-                            <div style="font-size: 2rem; color: var(--primary-green); font-weight: bold;">5★</div>
-                            <div style="font-size: 0.9rem;">Customer Rating</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enhanced Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Customer Success Stories</h2>
-            <p class="section-subtitle">Real experiences from our eco-conscious community</p>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                        <div style="background: var(--accent-green); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 1rem;">JD</div>
-                        <div>
-                            <div class="testimonial-author">Jennifer Davis</div>
-                            <div class="testimonial-location">San Francisco, CA • Monthly Service</div>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">"Switching to EcoPure was the best decision! My home has never been cleaner, and I love that my kids are growing up in a toxin-free environment. The team is professional, reliable, and truly cares about sustainability."</p>
-                    <div style="color: var(--accent-green); margin-top: 1rem;">★★★★★</div>
-                </div>
                 
-                <div class="testimonial-card">
-                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                        <div style="background: var(--accent-green); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 1rem;">RT</div>
-                        <div>
-                            <div class="testimonial-author">Robert Thompson</div>
-                            <div class="testimonial-location">Los Angeles, CA • Deep Cleaning</div>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">"As someone with allergies, I was skeptical about eco-cleaning effectiveness. EcoPure proved me wrong! The deep cleaning was incredible, and my allergy symptoms have significantly improved. Worth every penny!"</p>
-                    <div style="color: var(--accent-green); margin-top: 1rem;">★★★★★</div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                        <div style="background: var(--accent-green); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 1rem;">ML</div>
-                        <div>
-                            <div class="testimonial-author">Maria Lopez</div>
-                            <div class="testimonial-location">San Diego, CA • Move-Out Cleaning</div>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">"The move-out cleaning service was exceptional! They left the apartment spotless using only green products. My landlord was impressed, and I got my full security deposit back. Thank you, EcoPure!"</p>
-                    <div style="color: var(--accent-green); margin-top: 1rem;">★★★★★</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Conversion Section -->
-    <section class="features" style="background: linear-gradient(135deg, var(--light-green), var(--eco-blue)); color: white;">
-        <div class="container" style="text-align: center;">
-            <h2 style="color: white; margin-bottom: 1rem;">Ready to Join the Eco-Cleaning Revolution?</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Take the first step toward a cleaner home and healthier planet. Book your eco-friendly cleaning service today and experience the EcoPure difference.</p>
-            
-            <div style="background: rgba(255,255,255,0.1); border-radius: 20px; padding: 2rem; margin-top: 2rem; backdrop-filter: blur(10px);">
-                <h3 style="margin-bottom: 1.5rem;">Limited Time Offer</h3>
-                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Get 20% OFF your first eco-cleaning service!</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="booking.html" class="cta-button" style="background: white; color: var(--primary-green);">Claim Your Discount</a>
-                    <a href="pricing.html" class="secondary-button" style="border-color: white; color: white;">View Pricing</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Badges -->
-    <section class="services">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2 class="section-title">Certified & Trusted</h2>
-                <p class="section-subtitle">Our commitment to excellence and sustainability</p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
-                <div style="background: var(--light-gray); padding: 2rem; border-radius: 15px;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏆</div>
-                    <h4>EPA Certified</h4>
-                    <p style="font-size: 0.9rem; color: var(--dark-gray);">All products meet EPA standards</p>
-                </div>
-                <div style="background: var(--light-gray); padding: 2rem; border-radius: 15px;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌿</div>
-                    <h4>Green Seal Certified</h4>
-                    <p style="font-size: 0.9rem; color: var(--dark-gray);">Recognized green cleaning leader</p>
-                </div>
-                <div style="background: var(--light-gray); padding: 2rem; border-radius: 15px;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛡️</div>
-                    <h4>Insured & Bonded</h4>
-                    <p style="font-size: 0.9rem; color: var(--dark-gray);">Fully protected services</p>
-                </div>
-                <div style="background: var(--light-gray); padding: 2rem; border-radius: 15px;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">⭐</div>
-                    <h4>5-Star Rated</h4>
-                    <p style="font-size: 0.9rem; color: var(--dark-gray);">Consistently top-rated service</p>
+                <div style="margin-top: 3rem;">
+                    <a href="booking.html" class="cta-button" style="background: white; color: var(--primary-green);">Join Our Community</a>
                 </div>
             </div>
         </div>
@@ -305,6 +612,7 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
     <script src="js/chatbot.js"></script>
 </body>
