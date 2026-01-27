@@ -333,9 +333,11 @@ header.simplified .mobile-menu-toggle {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--light-green), var(--eco-blue)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="leaf" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M10 2 Q5 10 10 18 Q15 10 10 2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23leaf)"/></svg>');
-    background-size: cover, 100px 100px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.85), rgba(0, 105, 92, 0.85)), 
+                url('https://images.unsplash.com/photo-1581578732487-c63e9b40c3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover, cover;
+    background-position: center, center;
+    background-attachment: fixed, scroll;
     color: var(--white);
     padding: 120px 0 80px;
     text-align: center;
@@ -382,9 +384,11 @@ header.simplified .mobile-menu-toggle {
 /* Features Section */
 .features {
     padding: 80px 0;
-    background: linear-gradient(135deg, #f8fdf8, #e8f5e8),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(76,175,80,0.1)"/></pattern></defs><rect width="60" height="60" fill="url(%23dots)"/></svg>');
-    background-size: cover, 60px 60px;
+    background: linear-gradient(rgba(248, 253, 248, 0.95), rgba(232, 245, 232, 0.95)),
+                url('https://images.unsplash.com/photo-1584464491033-06628a3e063f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover, cover;
+    background-position: center, center;
+    background-attachment: fixed, scroll;
     position: relative;
 }
 
@@ -445,6 +449,12 @@ header.simplified .mobile-menu-toggle {
 /* Services Section */
 .services {
     padding: 80px 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+                url('https://images.unsplash.com/photo-1600868484446-d8ae8bee1a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover, cover;
+    background-position: center, center;
+    background-attachment: fixed, scroll;
+    position: relative;
 }
 
 .section-title {
@@ -512,7 +522,12 @@ header.simplified .mobile-menu-toggle {
 /* Testimonials */
 .testimonials {
     padding: 80px 0;
-    background: var(--light-gray);
+    background: linear-gradient(rgba(245, 245, 245, 0.95), rgba(245, 245, 245, 0.95)),
+                url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover, cover;
+    background-position: center, center;
+    background-attachment: fixed, scroll;
+    position: relative;
 }
 
 .testimonials-grid {
@@ -660,6 +675,14 @@ footer {
     
     .logo {
         font-size: 1.4rem;
+    }
+    
+    /* Mobile Background Fixes */
+    .hero,
+    .features,
+    .services,
+    .testimonials {
+        background-attachment: scroll, scroll;
     }
     
     .nav-links {
