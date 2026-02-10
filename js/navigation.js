@@ -16,22 +16,22 @@ class NavigationManager {
     getCurrentPage() {
         const path = window.location.pathname;
         const filename = path.split('/').pop() || 'index.html';
-        
+
         // Handle index.html as Home 1
         if (filename === 'index.html' || filename === '') {
             return 'home';
         }
-        
+
         // Remove .html extension for easier comparison
         return filename.replace('.html', '');
     }
 
     setupDropdowns() {
         const dropdowns = document.querySelectorAll('.dropdown');
-        
+
         dropdowns.forEach(dropdown => {
             const toggle = dropdown.querySelector('.dropdown-toggle');
-            
+
             if (toggle) {
                 // Click event for mobile and desktop
                 toggle.addEventListener('click', (e) => {
@@ -50,16 +50,16 @@ class NavigationManager {
 
     setupHoverBehavior() {
         const dropdowns = document.querySelectorAll('.dropdown');
-        
+
         dropdowns.forEach(dropdown => {
             const toggle = dropdown.querySelector('.dropdown-toggle');
-            
-            if (toggle && window.innerWidth > 768) {
+
+            if (toggle && window.innerWidth > 991) {
                 // Hover events for desktop only
                 dropdown.addEventListener('mouseenter', () => {
                     this.openDropdown(dropdown);
                 });
-                
+
                 dropdown.addEventListener('mouseleave', () => {
                     this.closeDropdown(dropdown);
                 });
@@ -69,12 +69,12 @@ class NavigationManager {
 
     toggleDropdown(dropdown) {
         const isActive = dropdown.classList.contains('active');
-        
+
         // Close all dropdowns
         document.querySelectorAll('.dropdown').forEach(d => {
             d.classList.remove('active');
         });
-        
+
         // Open clicked dropdown if it wasn't active
         if (!isActive) {
             this.openDropdown(dropdown);
@@ -92,28 +92,41 @@ class NavigationManager {
     setupMobileMenu() {
         const toggle = document.getElementById('mobileMenuToggle');
         const navLinks = document.getElementById('navLinks');
-        
+
         if (toggle && navLinks) {
             toggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
+                const isActive = navLinks.classList.toggle('active');
+                toggle.classList.toggle('active');
+
+                // Toggle the icon between bars and times
+                const icon = toggle.querySelector('i');
+                if (icon) {
+                    if (isActive) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
             });
         }
     }
 
     setActiveStates() {
         const navLinks = document.querySelectorAll('.nav-links a');
-        
+
         navLinks.forEach(link => {
             const href = link.getAttribute('href');
             const pageName = this.getPageNameFromHref(href);
-            
+
             // Check if this link should be active
             if (this.shouldBeActive(pageName)) {
                 link.classList.add('active');
-                
+
                 // If this is a dropdown parent, keep it open on desktop
                 const dropdown = link.closest('.dropdown');
-                if (dropdown && window.innerWidth > 768) {
+                if (dropdown && window.innerWidth > 991) {
                     dropdown.classList.add('active');
                 }
             } else {
@@ -124,14 +137,14 @@ class NavigationManager {
 
     getPageNameFromHref(href) {
         if (!href) return '';
-        
+
         const filename = href.split('/').pop();
-        
+
         // Handle index.html as home
         if (filename === 'index.html' || href === './' || href === '/') {
             return 'home';
         }
-        
+
         return filename.replace('.html', '');
     }
 
@@ -140,12 +153,12 @@ class NavigationManager {
         if (pageName === 'home' && this.currentPage === 'home') {
             return true;
         }
-        
+
         // Home2 is active only when current page is home2
         if (pageName === 'home2' && this.currentPage === 'home2') {
             return true;
         }
-        
+
         // Other pages match directly
         return pageName === this.currentPage;
     }
@@ -153,7 +166,7 @@ class NavigationManager {
     setupClickOutside() {
         document.addEventListener('click', (e) => {
             const dropdowns = document.querySelectorAll('.dropdown');
-            
+
             dropdowns.forEach(dropdown => {
                 if (!dropdown.contains(e.target)) {
                     dropdown.classList.remove('active');
@@ -182,13 +195,22 @@ window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
         // Close mobile menu on desktop
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 991) {
             const navLinks = document.getElementById('navLinks');
+            const toggle = document.getElementById('mobileMenuToggle');
             if (navLinks) {
                 navLinks.classList.remove('active');
             }
+            if (toggle) {
+                toggle.classList.remove('active');
+                const icon = toggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
         }
-        
+
         // Reinitialize active states
         const navManager = new NavigationManager();
         navManager.setActiveStates();
@@ -198,10 +220,10 @@ window.addEventListener('resize', () => {
 
 // Close mobile menu when clicking on links (for better UX)
 document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 991) {
         const navLinks = document.getElementById('navLinks');
         const mobileToggle = document.getElementById('mobileMenuToggle');
-        
+
         if (e.target.closest('.nav-links a') && navLinks && navLinks.classList.contains('active')) {
             navLinks.classList.remove('active');
         }

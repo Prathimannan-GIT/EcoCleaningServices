@@ -4,15 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoPure Cleaning Services - Green Living Starts Here</title>
+    <title>Eco Cleaning - Green Living Starts Here</title>
     <meta name="description"
         content="Transform your space with our revolutionary eco-cleaning solutions. Experience the future of sustainable cleaning.">
     <!-- Favicon -->
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
     <!-- Font Awesome for professional icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Tablet fix: Center tech cards */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .green-technology .tech-grid {
+                justify-items: center;
+            }
+        }
+    </style>
+    <style>
+        /* Tablet fix: Center tech cards */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .eco-lifestyle .tech-grid {
+                justify-items: center;
+            }
+        }
+    </style>
+
     <style>
         .hero-alt {
             background: linear-gradient(135deg, #1b5e20, #4caf50, #8bc34a);
@@ -355,6 +372,41 @@
                 font-size: 2.5rem;
             }
         }
+
+        /* Tabs and Buttons Adjustment */
+        .metrics-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .metrics-content .cta-button {
+            margin-top: 1.5rem;
+        }
+
+        /* Center cards specifically for Tab view */
+        @media (min-width: 769px) and (max-width: 1024px) {
+
+            .stats-grid,
+            .tech-grid,
+            .lifestyle-grid,
+            .community-grid {
+                display: grid !important;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 350px)) !important;
+                justify-content: center !important;
+            }
+
+            .grid-auto-fit {
+                display: flex !important;
+                justify-content: center !important;
+                flex-wrap: wrap !important;
+            }
+
+            .grid-auto-fit>* {
+                flex: 0 1 350px !important;
+            }
+        }
     </style>
 </head>
 
@@ -362,7 +414,7 @@
     <!-- Header Navigation -->
     <header>
         <nav>
-            <a href="index.html" class="logo"><i class="fas fa-leaf"></i>EcoPure Cleaning Services</a>
+            <a href="index.html" class="logo"><i class="fas fa-leaf"></i>Eco Cleaning</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="home2.html" class="active">Home 2</a></li>
@@ -408,7 +460,7 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">85%</div>
-                    <div class="stat-label">Reduction in Chemical Usage</div>
+                    <div class="stat-label">Reduction in Chemical</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">50K</div>
@@ -417,6 +469,14 @@
                 <div class="stat-card">
                     <div class="stat-number">100%</div>
                     <div class="stat-label">Biodegradable Products</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Eco Green Services</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">200%</div>
+                    <div class="stat-label">Natural Cleaning Products</div>
                 </div>
             </div>
         </div>
@@ -428,34 +488,41 @@
             <h2 class="section-title">Advanced Green Technology</h2>
             <p class="section-subtitle">Cutting-edge solutions for sustainable cleaning</p>
 
-            <div class="tech-grid grid-auto-fit">
+            <!-- UPDATED: Tablet-centered, desktop unchanged -->
+            <div class="tech-grid grid-auto-fit d-flex flex-wrap justify-content-center justify-content-lg-start">
+
                 <div class="tech-card">
                     <div class="tech-icon"><i class="fas fa-microscope"></i></div>
                     <h3>Plant-Based Formulas</h3>
-                    <p>Our proprietary plant-based cleaning formulas deliver superior results without harsh chemicals,
-                        ensuring safety for your family and pets.</p>
+                    <p>
+                        Our proprietary plant-based cleaning formulas deliver superior results without harsh chemicals,
+                        ensuring safety for your family and pets.
+                    </p>
                 </div>
+
                 <div class="tech-card">
                     <div class="tech-icon"><i class="fas fa-droplet"></i></div>
                     <h3>Water Conservation Systems</h3>
-                    <p>Advanced cleaning techniques that use up to 70% less water while maintaining exceptional cleaning
-                        standards.</p>
+                    <p>
+                        Advanced cleaning techniques that use up to 70% less water while maintaining exceptional
+                        cleaning
+                        standards.
+                    </p>
                 </div>
+
                 <div class="tech-card">
                     <div class="tech-icon"><i class="fas fa-bolt"></i></div>
                     <h3>Energy-Efficient Equipment</h3>
-                    <p>State-of-the-art cleaning equipment that reduces energy consumption while maximizing cleaning
-                        effectiveness.</p>
+                    <p>
+                        State-of-the-art cleaning equipment that reduces energy consumption while maximizing cleaning
+                        effectiveness.
+                    </p>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-icon"><i class="fas fa-tree"></i></div>
-                    <h3>Carbon Neutral Operations</h3>
-                    <p>Every cleaning service is carbon neutral through our partnership with environmental organizations
-                        and sustainable practices.</p>
-                </div>
+
             </div>
         </div>
     </section>
+
 
     <!-- Section 3: Eco-Friendly Lifestyle -->
     <section class="eco-lifestyle">
@@ -464,7 +531,7 @@
             <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Simple changes for a sustainable future
             </p>
 
-            <div class="lifestyle-grid grid-auto-fit">
+            <div class="grid-auto-fit-3">
                 <div class="lifestyle-card">
                     <div class="lifestyle-icon"><i class="fas fa-house-user"></i></div>
                     <h3>Green Home Habits</h3>
@@ -481,11 +548,7 @@
                     <h3>Environmental Education</h3>
                     <p>Access resources and tips for living more sustainably beyond just cleaning practices.</p>
                 </div>
-                <div class="lifestyle-card">
-                    <div class="lifestyle-icon"><i class="fas fa-users-viewfinder"></i></div>
-                    <h3>Family-Friendly Solutions</h3>
-                    <p>Safe, non-toxic cleaning solutions that protect the health of your entire family.</p>
-                </div>
+
             </div>
         </div>
     </section>
@@ -548,7 +611,7 @@
                 <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Together, we're creating a movement
                     toward sustainable living that extends beyond cleaning services.</p>
 
-                <div class="community-grid grid-auto-fit">
+                <div class="grid-auto-fit-3">
                     <div class="community-stat">
                         <div class="community-number">15K+</div>
                         <div class="community-label">Eco-Conscious Homes</div>
@@ -561,10 +624,7 @@
                         <div class="community-number">50K</div>
                         <div class="community-label">Trees Planted</div>
                     </div>
-                    <div class="community-stat">
-                        <div class="community-number">100%</div>
-                        <div class="community-label">Renewable Energy</div>
-                    </div>
+
                 </div>
 
                 <div style="margin-top: 3rem;">
@@ -580,9 +640,21 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>About EcoPure</h3>
+                    <a href="index.html" class="logo"
+                        style="color: var(--accent-green); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem; font-weight: 700; text-decoration: none;"><i
+                            class="fas fa-leaf"></i>Eco Cleaning</a>
                     <p>Your trusted partner in sustainable cleaning solutions. We're committed to providing exceptional
                         cleaning services while protecting our planet.</p>
+                    <div class="social-media" style="justify-content: flex-start; margin-top: 1.5rem;">
+                        <a href="https://facebook.com" class="social-icon" aria-label="Facebook" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" class="social-icon" aria-label="Instagram" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" class="social-icon" aria-label="Twitter" target="_blank"><i
+                                class="fab fa-x-twitter"></i></a>
+                        <a href="https://linkedin.com" class="social-icon" aria-label="LinkedIn" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
 
                 <div class="footer-section">
@@ -613,17 +685,11 @@
                         <li><i class="fas fa-location-dot"></i> Serving California Bay Area</li>
                         <li><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</li>
                     </ul>
-                    <div class="social-media">
-                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 EcoPure Cleaning Services. All rights reserved.</p>
+                <p>&copy; 2026 Eco Cleaning. All rights reserved.</p>
                 <p style="margin-top: 0.5rem; font-size: 0.9rem;">
                     <a href="privacy-policy.html" style="color: inherit; margin: 0 10px;">Privacy Policy</a> |
                     <a href="terms.html" style="color: inherit; margin: 0 10px;">Terms & Conditions</a> |

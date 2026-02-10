@@ -2,23 +2,31 @@
 <html lang="en">
 
 <head>
+    <style>
+        /* Tablet fix: Center tech cards */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .services .tech-grid {
+                justify-items: center;
+            }
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About EcoPure Cleaning Services - Our Story & Mission</title>
+    <title>About Eco Cleaning - Our Story & Mission</title>
     <meta name="description"
-        content="Learn about EcoPure Cleaning Services' mission to provide sustainable, eco-friendly cleaning solutions while protecting our planet and your health.">
+        content="Learn about Eco Cleaning' mission to provide sustainable, eco-friendly cleaning solutions while protecting our planet and your health.">
     <!-- Favicon -->
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
     <!-- Font Awesome for professional icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo"><i class="fas fa-leaf"></i>EcoPure Cleaning Services</a>
+            <a href="index.html" class="logo"><i class="fas fa-leaf"></i>Eco Cleaning</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="home2.html">Home 2</a></li>
@@ -41,7 +49,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>About EcoPure Cleaning Services</h1>
+            <h1>About Eco Cleaning</h1>
             <p>Pioneering sustainable cleaning solutions for a healthier planet and happier homes since 2016.</p>
             <div class="hero-buttons">
                 <a href="booking.html" class="cta-button">Book Our Services</a>
@@ -56,7 +64,7 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
                 <div style="text-align: center;">
                     <h2 class="section-title">Our Story</h2>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">EcoPure Cleaning Services was born from a simple
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Eco Cleaning was born from a simple
                         realization: traditional cleaning products were harming our homes and our planet. Our founder,
                         Sarah Martinez, experienced this firsthand when her child developed allergies linked to harsh
                         chemical cleaners.</p>
@@ -156,62 +164,8 @@
         </div>
     </section>
 
-    <!-- Our Team -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Meet Our Leadership Team</h2>
-            <p class="section-subtitle">The passionate professionals behind EcoPure's success</p>
 
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="text-align: center; background: var(--light-gray); padding: 2rem; border-radius: 15px;">
-                    <div
-                        style="background: var(--primary-green); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 2rem;">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">Sarah Martinez</h3>
-                    <p style="font-weight: 600; margin-bottom: 1rem;">Founder & CEO</p>
-                    <p style="font-size: 0.9rem; line-height: 1.6;">Environmental advocate with 15+ years in sustainable
-                        business development. Passionate about creating healthier homes through eco-friendly solutions.
-                    </p>
-                </div>
 
-                <div style="text-align: center; background: var(--light-gray); padding: 2rem; border-radius: 15px;">
-                    <div
-                        style="background: var(--primary-green); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 2rem;">
-                        <i class="fas fa-microscope"></i>
-                    </div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">Dr. James Chen</h3>
-                    <p style="font-weight: 600; margin-bottom: 1rem;">Head of Green Innovation</p>
-                    <p style="font-size: 0.9rem; line-height: 1.6;">Environmental scientist specializing in green
-                        chemistry. Leads our product research and ensures all solutions meet the highest eco-standards.
-                    </p>
-                </div>
-
-                <div style="text-align: center; background: var(--light-gray); padding: 2rem; border-radius: 15px;">
-                    <div
-                        style="background: var(--primary-green); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 2rem;">
-                        <i class="fas fa-user-check"></i>
-                    </div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">Maria Rodriguez</h3>
-                    <p style="font-weight: 600; margin-bottom: 1rem;">Operations Director</p>
-                    <p style="font-size: 0.9rem; line-height: 1.6;">Certified green cleaning specialist with 10+ years
-                        experience. Ensures every service meets our high standards of quality and sustainability.</p>
-                </div>
-
-                <div style="text-align: center; background: var(--light-gray); padding: 2rem; border-radius: 15px;">
-                    <div
-                        style="background: var(--primary-green); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 2rem;">
-                        <i class="fas fa-users-gear"></i>
-                    </div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">Michael Thompson</h3>
-                    <p style="font-weight: 600; margin-bottom: 1rem;">Customer Experience Lead</p>
-                    <p style="font-size: 0.9rem; line-height: 1.6;">Dedicated to ensuring every customer receives
-                        exceptional service. Leads our training and quality assurance programs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Certifications & Awards -->
     <section class="features">
@@ -307,14 +261,7 @@
                         <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">500+</div>
                         <div>Local Families Helped</div>
                     </div>
-                    <div>
-                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">75%</div>
-                        <div>Waste Reduction</div>
-                    </div>
-                    <div>
-                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">25+</div>
-                        <div>Community Partners</div>
-                    </div>
+
                 </div>
 
                 <div style="text-align: center; margin-top: 2rem;">
@@ -345,9 +292,21 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>About EcoPure</h3>
+                    <a href="index.html" class="logo"
+                        style="color: var(--accent-green); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem; font-weight: 700; text-decoration: none;"><i
+                            class="fas fa-leaf"></i>Eco Cleaning</a>
                     <p>Your trusted partner in sustainable cleaning solutions. We're committed to providing exceptional
                         cleaning services while protecting our planet.</p>
+                    <div class="social-media" style="justify-content: flex-start; margin-top: 1.5rem;">
+                        <a href="https://facebook.com" class="social-icon" aria-label="Facebook" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" class="social-icon" aria-label="Instagram" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" class="social-icon" aria-label="Twitter" target="_blank"><i
+                                class="fab fa-x-twitter"></i></a>
+                        <a href="https://linkedin.com" class="social-icon" aria-label="LinkedIn" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
 
                 <div class="footer-section">
@@ -382,7 +341,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 EcoPure Cleaning Services. All rights reserved.</p>
+                <p>&copy; 2026 Eco Cleaning. All rights reserved.</p>
                 <p style="margin-top: 0.5rem; font-size: 0.9rem;">
                     <a href="privacy-policy.html" style="color: inherit; margin: 0 10px;">Privacy Policy</a> |
                     <a href="terms.html" style="color: inherit; margin: 0 10px;">Terms & Conditions</a> |

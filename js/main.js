@@ -1,30 +1,9 @@
 // EcoPure Cleaning Services - Main JavaScript File
 // Common functionality for all pages
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const navLinks = document.getElementById('navLinks');
-    
-    if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
-        });
-    }
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (navLinks && navLinks.classList.contains('active')) {
-            if (!navLinks.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
-                navLinks.classList.remove('active');
-                if (mobileMenuToggle) {
-                    mobileMenuToggle.textContent = '☰';
-                }
-            }
-        }
-    });
-    
+document.addEventListener('DOMContentLoaded', function () {
+    // Mobile menu logic is handled in navigation.js to avoid conflicts
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -38,15 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     // Header scroll effect
     let lastScrollTop = 0;
     const header = document.querySelector('header');
-    
+
     if (header) {
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
+
             if (scrollTop > 100) {
                 header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
                 header.style.background = 'rgba(255, 255, 255, 0.98)';
@@ -54,19 +33,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
                 header.style.background = 'var(--white)';
             }
-            
+
             lastScrollTop = scrollTop;
         });
     }
-    
+
     // Form validation helper
-    window.validateForm = function(formId) {
+    window.validateForm = function (formId) {
         const form = document.getElementById(formId);
         if (!form) return false;
-        
+
         const requiredFields = form.querySelectorAll('[required]');
         let isValid = true;
-        
+
         requiredFields.forEach(field => {
             if (!field.value.trim()) {
                 field.style.borderColor = 'red';
@@ -75,18 +54,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 field.style.borderColor = '';
             }
         });
-        
+
         return isValid;
     };
-    
+
     // Email validation helper
-    window.validateEmail = function(email) {
+    window.validateEmail = function (email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     };
-    
+
     // Phone number formatting helper
-    window.formatPhoneNumber = function(input) {
+    window.formatPhoneNumber = function (input) {
         let value = input.value.replace(/\D/g, '');
         if (value.length > 0) {
             if (value.length <= 3) {
@@ -99,27 +78,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         input.value = value;
     };
-    
+
     // Show success message helper
-    window.showSuccessMessage = function(messageId, duration = 5000) {
+    window.showSuccessMessage = function (messageId, duration = 5000) {
         const message = document.getElementById(messageId);
         if (message) {
             message.classList.add('show');
             message.scrollIntoView({ behavior: 'smooth' });
-            
+
             setTimeout(() => {
                 message.classList.remove('show');
             }, duration);
         }
     };
-    
+
     // Animate elements on scroll
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
-    const observer = new IntersectionObserver(function(entries) {
+
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
@@ -127,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
-    
+
     // Observe feature cards and service cards for animation
     document.querySelectorAll('.feature-card, .service-card, .testimonial-card').forEach(card => {
         card.style.opacity = '0';
@@ -135,38 +114,38 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(card);
     });
-    
+
     // Set minimum date for date inputs to today
     const dateInputs = document.querySelectorAll('input[type="date"]');
     const today = new Date().toISOString().split('T')[0];
-    
+
     dateInputs.forEach(input => {
         input.setAttribute('min', today);
     });
-    
+
     // Add loading state to buttons
     document.querySelectorAll('.cta-button, .secondary-button').forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             if (this.tagName === 'BUTTON' && this.type === 'submit') {
                 // Don't add loading to submit buttons as they handle form submission
                 return;
             }
-            
+
             const originalText = this.textContent;
             this.style.opacity = '0.7';
             this.style.cursor = 'not-allowed';
-            
+
             setTimeout(() => {
                 this.style.opacity = '1';
                 this.style.cursor = 'pointer';
             }, 1000);
         });
     });
-    
+
     // Initialize tooltips (if any)
     const tooltipElements = document.querySelectorAll('[data-tooltip]');
     tooltipElements.forEach(element => {
-        element.addEventListener('mouseenter', function() {
+        element.addEventListener('mouseenter', function () {
             const tooltip = document.createElement('div');
             tooltip.className = 'tooltip';
             tooltip.textContent = this.getAttribute('data-tooltip');
@@ -181,24 +160,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 pointer-events: none;
                 white-space: nowrap;
             `;
-            
+
             document.body.appendChild(tooltip);
-            
+
             const rect = this.getBoundingClientRect();
             tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
             tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
-            
+
             this.tooltip = tooltip;
         });
-        
-        element.addEventListener('mouseleave', function() {
+
+        element.addEventListener('mouseleave', function () {
             if (this.tooltip) {
                 this.tooltip.remove();
                 this.tooltip = null;
             }
         });
     });
-    
+
     // Add CSS for tooltips
     const tooltipStyles = document.createElement('style');
     tooltipStyles.textContent = `
@@ -207,21 +186,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(tooltipStyles);
-    
+
     // Print functionality
-    window.printPage = function() {
+    window.printPage = function () {
         window.print();
     };
-    
+
     // Copy to clipboard functionality
-    window.copyToClipboard = function(text, buttonElement) {
+    window.copyToClipboard = function (text, buttonElement) {
         if (navigator.clipboard) {
             navigator.clipboard.writeText(text).then(() => {
                 if (buttonElement) {
                     const originalText = buttonElement.textContent;
                     buttonElement.textContent = 'Copied!';
                     buttonElement.style.background = 'var(--accent-green)';
-                    
+
                     setTimeout(() => {
                         buttonElement.textContent = originalText;
                         buttonElement.style.background = '';
@@ -230,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     };
-    
+
     // Lazy loading for images (if any)
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -242,12 +221,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     document.querySelectorAll('img[data-src]').forEach(img => {
         img.classList.add('lazy');
         imageObserver.observe(img);
     });
-    
+
     // Add CSS for lazy loading
     const lazyStyles = document.createElement('style');
     lazyStyles.textContent = `
@@ -260,14 +239,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(lazyStyles);
-    
+
     // Handle image loading
     document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('load', function() {
+        img.addEventListener('load', function () {
             this.classList.add('loaded');
         });
     });
-    
+
     // Console welcome message
     console.log('%c🌱 Welcome to EcoPure Cleaning Services!', 'color: #2d7a2d; font-size: 16px; font-weight: bold;');
     console.log('%cSustainable Cleaning. Healthier Living.', 'color: #4caf50; font-size: 14px;');
@@ -277,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Utility functions
 window.EcoPure = {
     // Debounce function for performance
-    debounce: function(func, wait) {
+    debounce: function (func, wait) {
         let timeout;
         return function executedFunction(...args) {
             const later = () => {
@@ -288,11 +267,11 @@ window.EcoPure = {
             timeout = setTimeout(later, wait);
         };
     },
-    
+
     // Throttle function for scroll events
-    throttle: function(func, limit) {
+    throttle: function (func, limit) {
         let inThrottle;
-        return function() {
+        return function () {
             const args = arguments;
             const context = this;
             if (!inThrottle) {
@@ -302,30 +281,30 @@ window.EcoPure = {
             }
         };
     },
-    
+
     // Get URL parameters
-    getUrlParameter: function(name) {
+    getUrlParameter: function (name) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(name);
     },
-    
+
     // Set URL parameter
-    setUrlParameter: function(name, value) {
+    setUrlParameter: function (name, value) {
         const url = new URL(window.location);
         url.searchParams.set(name, value);
         window.history.replaceState({}, '', url);
     },
-    
+
     // Local storage helpers
-    setLocalStorage: function(key, value) {
+    setLocalStorage: function (key, value) {
         try {
             localStorage.setItem(key, JSON.stringify(value));
         } catch (e) {
             console.warn('Local storage is full or not available');
         }
     },
-    
-    getLocalStorage: function(key) {
+
+    getLocalStorage: function (key) {
         try {
             const item = localStorage.getItem(key);
             return item ? JSON.parse(item) : null;
@@ -334,18 +313,18 @@ window.EcoPure = {
             return null;
         }
     },
-    
+
     // Remove local storage item
-    removeLocalStorage: function(key) {
+    removeLocalStorage: function (key) {
         try {
             localStorage.removeItem(key);
         } catch (e) {
             console.warn('Error removing from local storage');
         }
     },
-    
+
     // Check if element is in viewport
-    isInViewport: function(element) {
+    isInViewport: function (element) {
         const rect = element.getBoundingClientRect();
         return (
             rect.top >= 0 &&
@@ -354,22 +333,22 @@ window.EcoPure = {
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     },
-    
+
     // Generate random ID
-    generateId: function() {
+    generateId: function () {
         return 'ecopure_' + Math.random().toString(36).substr(2, 9);
     },
-    
+
     // Format currency
-    formatCurrency: function(amount) {
+    formatCurrency: function (amount) {
         return new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD'
         }).format(amount);
     },
-    
+
     // Format date
-    formatDate: function(date, options = {}) {
+    formatDate: function (date, options = {}) {
         const defaultOptions = {
             year: 'numeric',
             month: 'long',
@@ -452,12 +431,12 @@ skipLink.textContent = 'Skip to main content';
 document.body.insertBefore(skipLink, document.body.firstChild);
 
 // Error handling for JavaScript errors
-window.addEventListener('error', function(e) {
+window.addEventListener('error', function (e) {
     console.error('JavaScript error:', e.error);
 });
 
 // Performance monitoring
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     if (window.performance && window.performance.timing) {
         const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
         console.log(`Page load time: ${loadTime}ms`);

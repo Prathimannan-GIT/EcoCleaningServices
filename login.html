@@ -4,23 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - EcoPure Cleaning Services</title>
+    <title>Login - Eco Cleaning</title>
     <meta name="description"
-        content="Login to your EcoPure Cleaning Services account to manage bookings and access exclusive features.">
+        content="Login to your Eco Cleaning account to manage bookings and access exclusive features.">
     <!-- Favicon -->
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
     <!-- Font Awesome for professional icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
         .auth-page {
-            min-height: 100vh;
+            min-height: calc(100vh - var(--navbar-height));
             background: linear-gradient(135deg, var(--primary-green), var(--light-green));
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 2rem 1rem;
+            margin-top: var(--navbar-height);
         }
 
         .auth-container {
@@ -32,7 +33,7 @@
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            min-height: 600px;
+            min-height: auto;
         }
 
         .auth-left {
@@ -272,10 +273,10 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 991px) {
             .auth-container {
                 grid-template-columns: 1fr;
-                max-width: 400px;
+                max-width: 500px;
             }
 
             .auth-left {
@@ -283,7 +284,25 @@
             }
 
             .auth-right {
-                padding: 2rem;
+                padding: 3rem 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-login {
+                flex-direction: column;
+            }
+
+            .auth-right {
+                padding: 2rem 1.5rem;
+            }
+
+            .auth-page {
+                padding: 1rem 0.5rem;
+            }
+
+            .auth-header h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -293,7 +312,7 @@
     <!-- Simplified Header for Auth Pages -->
     <header class="simplified">
         <nav>
-            <a href="index.html" class="logo"><i class="fas fa-leaf"></i>EcoPure Cleaning Services</a>
+            <a href="index.html" class="logo"><i class="fas fa-leaf"></i>Eco Cleaning</a>
         </nav>
     </header>
 
@@ -373,10 +392,26 @@
                     </div>
 
                     <div class="social-login">
-                        <button type="button" class="social-button"><i class="fab fa-google"
-                                style="margin-right: 8px; color: #DB4437;"></i>Google</button>
-                        <button type="button" class="social-button"><i class="fab fa-facebook-f"
-                                style="margin-right: 8px; color: #4267B2;"></i>Facebook</button>
+                        <button type="button" class="social-button">
+                            <svg width="18" height="18" viewBox="0 0 18 18"
+                                style="margin-right: 12px; vertical-align: middle;">
+                                <path fill="#4285F4"
+                                    d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.259h2.908c1.702-1.567 2.684-3.874 2.684-6.617z" />
+                                <path fill="#34A853"
+                                    d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z" />
+                                <path fill="#FBBC05"
+                                    d="M3.964 10.71c-.18-.54-.282-1.117-.282-1.71s.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z" />
+                                <path fill="#EA4335"
+                                    d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.48 0 2.419 2.051.957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z" />
+                            </svg>Google
+                        </button>
+                        <button type="button" class="social-button">
+                            <svg width="18" height="18" viewBox="0 0 18 18"
+                                style="margin-right: 12px; vertical-align: middle;">
+                                <path fill="#1877F2"
+                                    d="M18 9.006C18 4.03 13.97 0 9 0S0 4.03 0 9.006c0 4.493 3.288 8.223 7.594 8.898V11.61H5.03V9.006h2.564V7.02c0-2.529 1.506-3.927 3.812-3.927 1.104 0 2.258.197 2.258.197v2.482h-1.272c-1.254 0-1.64.778-1.64 1.576v1.658h2.797l-.447 2.604h-2.35v6.294C14.712 17.229 18 13.499 18 9.006z" />
+                            </svg>Facebook
+                        </button>
                     </div>
 
                     <div class="auth-footer">
