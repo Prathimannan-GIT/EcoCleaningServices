@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industries We Serve - EcoPure Cleaning Services</title>
-    <meta name="description" content="EcoPure Cleaning Services serves various industries with specialized eco-friendly cleaning solutions. Healthcare, education, retail, office, and more.">
+    <meta name="description"
+        content="EcoPure Cleaning Services serves various industries with specialized eco-friendly cleaning solutions. Healthcare, education, retail, office, and more.">
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <!-- Font Awesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- Header Navigation -->
     <header>
-        <nav class="container">
-            <a href="index.html" class="logo">EcoPure Cleaning Services</a>
+        <nav>
+            <a href="index.html" class="logo"><i class="fas fa-leaf"></i>EcoPure Cleaning Services</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -19,9 +27,16 @@
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="booking.html">Book Now</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="header-actions mobile-only">
+                    <a href="login.html" class="secondary-button">Login</a>
+                    <a href="register.html" class="cta-button">Register</a>
+                </li>
             </ul>
-            <a href="booking.html" class="cta-button">Get a Free Quote</a>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <div class="header-actions">
+                <a href="login.html" class="secondary-button desktop-only">Login</a>
+                <a href="register.html" class="cta-button">Register</a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fas fa-bars"></i></button>
         </nav>
     </header>
 
@@ -29,7 +44,8 @@
     <section class="hero">
         <div class="container">
             <h1>Industries We Serve</h1>
-            <p>Specialized eco-friendly cleaning solutions tailored to your industry's unique needs and requirements.</p>
+            <p>Specialized eco-friendly cleaning solutions tailored to your industry's unique needs and requirements.
+            </p>
             <div class="hero-buttons">
                 <a href="booking.html" class="cta-button">Get Industry Quote</a>
                 <a href="services.html" class="secondary-button">View All Services</a>
@@ -40,13 +56,18 @@
     <!-- Healthcare Industry -->
     <section class="services">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
+            <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
                 <div>
                     <h2 class="section-title" style="text-align: left;">Healthcare Facilities</h2>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Specialized eco-friendly cleaning for healthcare environments where hygiene and safety are paramount. Our medical-grade cleaning protocols ensure compliance while maintaining environmental responsibility.</p>
-                    
-                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Healthcare Facilities We Serve:</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Specialized eco-friendly cleaning for healthcare
+                        environments where hygiene and safety are paramount. Our medical-grade cleaning protocols ensure
+                        compliance while maintaining environmental responsibility.</p>
+
+                    <div
+                        style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Healthcare Facilities We Serve:
+                        </h4>
                         <ul style="padding-left: 1.5rem;">
                             <li>Medical clinics and doctor's offices</li>
                             <li>Dental practices</li>
@@ -56,9 +77,11 @@
                             <li>Alternative medicine facilities</li>
                         </ul>
                     </div>
-                    
-                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Specialized Healthcare Services:</h4>
+
+                    <div
+                        style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Specialized Healthcare Services:
+                        </h4>
                         <ul style="padding-left: 1.5rem;">
                             <li>Medical-grade disinfection</li>
                             <li>Waiting room sanitization</li>
@@ -68,22 +91,27 @@
                             <li>Compliance with health standards</li>
                         </ul>
                     </div>
-                    
+
                     <a href="booking.html" class="cta-button">Book Healthcare Cleaning</a>
                 </div>
-                
+
                 <div style="text-align: center;">
-                    <div style="background: var(--light-gray); border-radius: 20px; padding: 3rem;">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">🏥</div>
+                    <div
+                        style="background: white; border-radius: 20px; padding: 3.5rem 3rem; box-shadow: var(--shadow);">
+                        <div style="font-size: 4rem; margin-bottom: 1.5rem; color: var(--primary-green);"><i
+                                class="fas fa-hospital"></i></div>
                         <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Healthcare-Grade Clean</h3>
                         <p>EPA-approved disinfectants that are effective yet environmentally safe</p>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left;">
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left;">
                             <div>
-                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">99.9%</div>
+                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">99.9%
+                                </div>
                                 <div style="font-size: 0.9rem;">Germ Elimination</div>
                             </div>
                             <div>
-                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">100%</div>
+                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">100%
+                                </div>
                                 <div style="font-size: 0.9rem;">Eco-Friendly</div>
                             </div>
                         </div>
@@ -96,13 +124,17 @@
     <!-- Education Industry -->
     <section class="features">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
+            <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
                 <div style="text-align: center; order: 2;">
-                    <div style="background: var(--light-gray); border-radius: 20px; padding: 3rem;">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">🎓</div>
+                    <div
+                        style="background: white; border-radius: 20px; padding: 3.5rem 3rem; box-shadow: var(--shadow);">
+                        <div style="font-size: 4rem; margin-bottom: 1.5rem; color: var(--primary-green);"><i
+                                class="fas fa-graduation-cap"></i></div>
                         <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Safe Learning Environments</h3>
                         <p>Creating healthy spaces for students and educators with non-toxic cleaning solutions</p>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left;">
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left;">
                             <div>
                                 <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">0%</div>
                                 <div style="font-size: 0.9rem;">Harsh Chemicals</div>
@@ -114,13 +146,17 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div style="order: 1;">
                     <h2 class="section-title" style="text-align: left;">Educational Institutions</h2>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Safe, non-toxic cleaning solutions for schools and educational facilities where student health and learning environment quality are top priorities.</p>
-                    
-                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Educational Facilities We Serve:</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Safe, non-toxic cleaning solutions for schools
+                        and educational facilities where student health and learning environment quality are top
+                        priorities.</p>
+
+                    <div
+                        style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Educational Facilities We Serve:
+                        </h4>
                         <ul style="padding-left: 1.5rem;">
                             <li>Elementary and middle schools</li>
                             <li>High schools and preparatory schools</li>
@@ -130,8 +166,9 @@
                             <li>Libraries and study centers</li>
                         </ul>
                     </div>
-                    
-                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+
+                    <div
+                        style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
                         <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Education-Specific Services:</h4>
                         <ul style="padding-left: 1.5rem;">
                             <li>Classroom cleaning and sanitization</li>
@@ -142,7 +179,7 @@
                             <li>Allergy-safe cleaning protocols</li>
                         </ul>
                     </div>
-                    
+
                     <a href="booking.html" class="cta-button">Book Education Cleaning</a>
                 </div>
             </div>
@@ -152,12 +189,16 @@
     <!-- Retail Industry -->
     <section class="services">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
+            <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
                 <div>
                     <h2 class="section-title" style="text-align: left;">Retail & Commercial</h2>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Professional eco-friendly cleaning for retail spaces that enhance customer experience while maintaining environmental responsibility and brand image.</p>
-                    
-                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Professional eco-friendly cleaning for retail
+                        spaces that enhance customer experience while maintaining environmental responsibility and brand
+                        image.</p>
+
+                    <div
+                        style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
                         <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Retail Facilities We Serve:</h4>
                         <ul style="padding-left: 1.5rem;">
                             <li>Boutiques and specialty stores</li>
@@ -168,8 +209,9 @@
                             <li>Fitness centers and gyms</li>
                         </ul>
                     </div>
-                    
-                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+
+                    <div
+                        style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
                         <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Retail-Specific Services:</h4>
                         <ul style="padding-left: 1.5rem;">
                             <li>Floor care and maintenance</li>
@@ -180,18 +222,22 @@
                             <li>After-hours cleaning services</li>
                         </ul>
                     </div>
-                    
+
                     <a href="booking.html" class="cta-button">Book Retail Cleaning</a>
                 </div>
-                
+
                 <div style="text-align: center;">
-                    <div style="background: var(--light-gray); border-radius: 20px; padding: 3rem;">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">🛍️</div>
+                    <div
+                        style="background: white; border-radius: 20px; padding: 3.5rem 3rem; box-shadow: var(--shadow);">
+                        <div style="font-size: 4rem; margin-bottom: 1.5rem; color: var(--primary-green);"><i
+                                class="fas fa-bag-shopping"></i></div>
                         <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Customer-Friendly Clean</h3>
                         <p>Create welcoming retail environments that impress customers while staying green</p>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left;">
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left;">
                             <div>
-                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">24/7</div>
+                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">24/7
+                                </div>
                                 <div style="font-size: 0.9rem;">Flexible Scheduling</div>
                             </div>
                             <div>
@@ -208,30 +254,38 @@
     <!-- Office Industry -->
     <section class="features">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
+            <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
                 <div style="text-align: center; order: 2;">
-                    <div style="background: var(--light-gray); border-radius: 20px; padding: 3rem;">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">🏢</div>
+                    <div
+                        style="background: white; border-radius: 20px; padding: 3.5rem 3rem; box-shadow: var(--shadow);">
+                        <div style="font-size: 4rem; margin-bottom: 1.5rem; color: var(--primary-green);"><i
+                                class="fas fa-building"></i></div>
                         <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Productive Workspaces</h3>
                         <p>Healthy office environments that boost productivity and employee wellbeing</p>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left;">
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left;">
                             <div>
-                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">30%</div>
+                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">30%
+                                </div>
                                 <div style="font-size: 0.9rem;">Productivity Boost</div>
                             </div>
                             <div>
-                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">100%</div>
+                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">100%
+                                </div>
                                 <div style="font-size: 0.9rem;">Green Certified</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div style="order: 1;">
                     <h2 class="section-title" style="text-align: left;">Office & Corporate</h2>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Comprehensive eco-friendly cleaning for office environments that promote health, productivity, and corporate sustainability goals.</p>
-                    
-                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Comprehensive eco-friendly cleaning for office
+                        environments that promote health, productivity, and corporate sustainability goals.</p>
+
+                    <div
+                        style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
                         <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Office Facilities We Serve:</h4>
                         <ul style="padding-left: 1.5rem;">
                             <li>Corporate headquarters</li>
@@ -242,8 +296,9 @@
                             <li>Financial institutions</li>
                         </ul>
                     </div>
-                    
-                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+
+                    <div
+                        style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
                         <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Office-Specific Services:</h4>
                         <ul style="padding-left: 1.5rem;">
                             <li>Desk and workstation cleaning</li>
@@ -254,7 +309,7 @@
                             <li>IT equipment cleaning</li>
                         </ul>
                     </div>
-                    
+
                     <a href="booking.html" class="cta-button">Book Office Cleaning</a>
                 </div>
             </div>
@@ -264,13 +319,18 @@
     <!-- Hospitality Industry -->
     <section class="services">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
+            <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
                 <div>
                     <h2 class="section-title" style="text-align: left;">Hospitality & Entertainment</h2>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Eco-friendly cleaning solutions for hospitality venues that maintain high standards of cleanliness while appealing to environmentally conscious guests.</p>
-                    
-                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Hospitality Facilities We Serve:</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Eco-friendly cleaning solutions for hospitality
+                        venues that maintain high standards of cleanliness while appealing to environmentally conscious
+                        guests.</p>
+
+                    <div
+                        style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Hospitality Facilities We Serve:
+                        </h4>
                         <ul style="padding-left: 1.5rem;">
                             <li>Hotels and motels</li>
                             <li>Bed and breakfasts</li>
@@ -280,9 +340,11 @@
                             <li>Conference and convention centers</li>
                         </ul>
                     </div>
-                    
-                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Hospitality-Specific Services:</h4>
+
+                    <div
+                        style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Hospitality-Specific Services:
+                        </h4>
                         <ul style="padding-left: 1.5rem;">
                             <li>Guest room deep cleaning</li>
                             <li>Lobby and common area cleaning</li>
@@ -292,22 +354,26 @@
                             <li>Odor elimination treatments</li>
                         </ul>
                     </div>
-                    
+
                     <a href="booking.html" class="cta-button">Book Hospitality Cleaning</a>
                 </div>
-                
+
                 <div style="text-align: center;">
-                    <div style="background: var(--light-gray); border-radius: 20px; padding: 3rem;">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">🏨</div>
+                    <div
+                        style="background: white; border-radius: 20px; padding: 3.5rem 3rem; box-shadow: var(--shadow);">
+                        <div style="font-size: 4rem; margin-bottom: 1.5rem; color: var(--primary-green);"><i
+                                class="fas fa-hotel"></i></div>
                         <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Guest-Ready Clean</h3>
                         <p>Exceptional cleanliness that enhances guest satisfaction and your green reputation</p>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left;">
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left;">
                             <div>
                                 <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">5★</div>
                                 <div style="font-size: 0.9rem;">Guest Ratings</div>
                             </div>
                             <div>
-                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">Eco</div>
+                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">Eco
+                                </div>
                                 <div style="font-size: 0.9rem;">Certified Green</div>
                             </div>
                         </div>
@@ -320,31 +386,40 @@
     <!-- Industrial & Manufacturing -->
     <section class="features">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
+            <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
                 <div style="text-align: center; order: 2;">
-                    <div style="background: var(--light-gray); border-radius: 20px; padding: 3rem;">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">🏭</div>
+                    <div
+                        style="background: white; border-radius: 20px; padding: 3.5rem 3rem; box-shadow: var(--shadow);">
+                        <div style="font-size: 4rem; margin-bottom: 1.5rem; color: var(--primary-green);"><i
+                                class="fas fa-industry"></i></div>
                         <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Industrial Strength Clean</h3>
                         <p>Powerful eco-cleaning solutions designed for industrial environments</p>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left;">
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; text-align: left;">
                             <div>
-                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">OSHA</div>
+                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">OSHA
+                                </div>
                                 <div style="font-size: 0.9rem;">Compliant</div>
                             </div>
                             <div>
-                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">Green</div>
+                                <div style="font-size: 1.5rem; color: var(--primary-green); font-weight: bold;">Green
+                                </div>
                                 <div style="font-size: 0.9rem;">Industrial Solutions</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div style="order: 1;">
                     <h2 class="section-title" style="text-align: left;">Industrial & Manufacturing</h2>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Heavy-duty eco-friendly cleaning for industrial facilities that meet safety standards while reducing environmental impact.</p>
-                    
-                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Industrial Facilities We Serve:</h4>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.8;">Heavy-duty eco-friendly cleaning for industrial
+                        facilities that meet safety standards while reducing environmental impact.</p>
+
+                    <div
+                        style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Industrial Facilities We Serve:
+                        </h4>
                         <ul style="padding-left: 1.5rem;">
                             <li>Manufacturing plants</li>
                             <li>Warehouses and distribution centers</li>
@@ -354,8 +429,9 @@
                             <li>Laboratories and research facilities</li>
                         </ul>
                     </div>
-                    
-                    <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+
+                    <div
+                        style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
                         <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Industrial-Specific Services:</h4>
                         <ul style="padding-left: 1.5rem;">
                             <li>Heavy equipment cleaning</li>
@@ -366,7 +442,7 @@
                             <li>Post-construction cleanup</li>
                         </ul>
                     </div>
-                    
+
                     <a href="booking.html" class="cta-button">Book Industrial Cleaning</a>
                 </div>
             </div>
@@ -378,55 +454,65 @@
         <div class="container">
             <h2 class="section-title">Our Industry Expertise</h2>
             <p class="section-subtitle">Why businesses across industries trust EcoPure</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
                 <div class="feature-card">
-                    <div class="feature-icon">📋</div>
+                    <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
                     <h3>Industry-Specific Protocols</h3>
-                    <p>Customized cleaning procedures designed for each industry's unique requirements and compliance standards.</p>
+                    <p>Customized cleaning procedures designed for each industry's unique requirements and compliance
+                        standards.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">🕐</div>
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
                     <h3>Flexible Scheduling</h3>
-                    <p>24/7 availability and after-hours services to minimize disruption to your business operations.</p>
+                    <p>24/7 availability and after-hours services to minimize disruption to your business operations.
+                    </p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">👥</div>
+                    <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
                     <h3>Trained Professionals</h3>
-                    <p>Industry-certified cleaning specialists trained in specific sector requirements and safety protocols.</p>
+                    <p>Industry-certified cleaning specialists trained in specific sector requirements and safety
+                        protocols.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">📊</div>
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>Detailed Reporting</h3>
                     <p>Comprehensive cleaning logs and quality assurance reports for compliance and accountability.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">🌿</div>
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
                     <h3>Green Certification Support</h3>
                     <p>Help your business achieve and maintain green certifications and sustainability goals.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">💰</div>
+                    <div class="feature-icon"><i class="fas fa-hand-holding-dollar"></i></div>
                     <h3>Cost-Effective Solutions</h3>
-                    <p>Efficient cleaning programs that reduce costs while maintaining high standards of cleanliness.</p>
+                    <p>Efficient cleaning programs that reduce costs while maintaining high standards of cleanliness.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="features" style="background: linear-gradient(135deg, var(--light-green), var(--eco-blue)); color: white;">
+    <section class="features"
+        style="background: linear-gradient(135deg, var(--light-green), var(--eco-blue)); color: white;">
         <div class="container" style="text-align: center;">
             <h2 style="color: white; margin-bottom: 1rem;">Ready to Transform Your Industry Space?</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Join the growing number of businesses choosing eco-friendly cleaning solutions that protect their employees, customers, and the environment.</p>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Join the growing number of businesses choosing eco-friendly cleaning solutions that protect their
+                employees, customers, and the environment.</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="booking.html" class="cta-button" style="background: white; color: var(--primary-green);">Get Industry Quote</a>
-                <a href="contact.html" class="secondary-button" style="border-color: white; color: white;">Consultation Call</a>
+                <a href="booking.html" class="cta-button" style="background: white; color: var(--primary-green);">Get
+                    Industry Quote</a>
+                <a href="contact.html" class="secondary-button" style="border-color: white; color: white;">Consultation
+                    Call</a>
             </div>
         </div>
     </section>
@@ -437,9 +523,10 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>About EcoPure</h3>
-                    <p>Your trusted partner in sustainable cleaning solutions. We're committed to providing exceptional cleaning services while protecting our planet.</p>
+                    <p>Your trusted partner in sustainable cleaning solutions. We're committed to providing exceptional
+                        cleaning services while protecting our planet.</p>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Services</h3>
                     <ul>
@@ -449,7 +536,7 @@
                         <li><a href="services.html">Move-In/Out Cleaning</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
@@ -459,24 +546,25 @@
                         <li><a href="green-products.html">Our Products</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Contact Info</h3>
                     <ul>
-                        <li>📞 (555) 123-4567</li>
-                        <li>📧 info@ecopurecleaning.com</li>
-                        <li>📍 Serving California Bay Area</li>
-                        <li>🕐 Mon-Fri: 8AM-6PM</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@ecopurecleaning.com</li>
+                        <li><i class="fas fa-location-dot"></i> Serving California Bay Area</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2026 EcoPure Cleaning Services. All rights reserved.</p>
                 <p style="margin-top: 0.5rem; font-size: 0.9rem;">
                     <a href="privacy-policy.html" style="color: inherit; margin: 0 10px;">Privacy Policy</a> |
                     <a href="terms.html" style="color: inherit; margin: 0 10px;">Terms & Conditions</a> |
-                    <a href="environmental-commitment.html" style="color: inherit; margin: 0 10px;">Environmental Commitment</a>
+                    <a href="environmental-commitment.html" style="color: inherit; margin: 0 10px;">Environmental
+                        Commitment</a>
                 </p>
             </div>
         </div>
@@ -484,7 +572,7 @@
 
     <!-- Chatbot -->
     <div class="chatbot-container">
-        <button class="chatbot-toggle" id="chatbotToggle">💬</button>
+        <button class="chatbot-toggle" id="chatbotToggle"><i class="fas fa-comment-dots"></i></button>
         <div class="chatbot-window" id="chatbotWindow">
             <div class="chatbot-header">
                 <span>🌱 EcoPure Assistant</span>
@@ -492,7 +580,8 @@
             </div>
             <div class="chatbot-messages" id="chatbotMessages">
                 <div class="message bot">
-                    <div class="message-bubble">Hello! I'm here to help you with any questions about our eco-friendly cleaning services. How can I assist you today?</div>
+                    <div class="message-bubble">Hello! I'm here to help you with any questions about our eco-friendly
+                        cleaning services. How can I assist you today?</div>
                 </div>
             </div>
             <div class="chatbot-input-container">
@@ -508,7 +597,10 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="js/theme.js"></script>
+    <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
     <script src="js/chatbot.js"></script>
 </body>
+
 </html>

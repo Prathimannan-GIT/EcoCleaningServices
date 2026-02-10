@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - EcoPure Cleaning Services</title>
-    <meta name="description" content="Create your EcoPure Cleaning Services account and start your journey to eco-friendly cleaning.">
+    <meta name="description"
+        content="Create your EcoPure Cleaning Services account and start your journey to eco-friendly cleaning.">
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <!-- Font Awesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
         .auth-page {
@@ -15,11 +22,11 @@
             justify-content: center;
             padding: 2rem;
         }
-        
+
         .auth-container {
             background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             max-width: 1000px;
             width: 100%;
@@ -27,7 +34,7 @@
             grid-template-columns: 1fr 1.2fr;
             min-height: 700px;
         }
-        
+
         .auth-left {
             background: linear-gradient(135deg, var(--eco-blue), var(--primary-green));
             color: white;
@@ -38,7 +45,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .auth-left::before {
             content: '';
             position: absolute;
@@ -46,22 +53,29 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
             animation: float 20s infinite ease-in-out;
         }
-        
+
         @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(-30px, -30px) rotate(180deg); }
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            50% {
+                transform: translate(-30px, -30px) rotate(180deg);
+            }
         }
-        
+
         .auth-left h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
             position: relative;
             z-index: 1;
         }
-        
+
         .auth-left p {
             margin-bottom: 2rem;
             opacity: 0.9;
@@ -69,24 +83,24 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .auth-benefits {
             position: relative;
             z-index: 1;
         }
-        
+
         .auth-benefit {
             display: flex;
             align-items: center;
             margin-bottom: 1.2rem;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             padding: 1rem;
             border-radius: 10px;
             backdrop-filter: blur(10px);
         }
-        
+
         .auth-benefit-icon {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -96,57 +110,57 @@
             margin-right: 1rem;
             font-size: 1.5rem;
         }
-        
+
         .auth-benefit-content h4 {
             margin-bottom: 0.25rem;
             font-size: 1rem;
         }
-        
+
         .auth-benefit-content p {
             font-size: 0.85rem;
             margin: 0;
             opacity: 0.9;
         }
-        
+
         .auth-right {
             padding: 3rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        
+
         .auth-form {
             max-width: 450px;
             margin: 0 auto;
             width: 100%;
         }
-        
+
         .auth-header {
             text-align: center;
             margin-bottom: 2rem;
         }
-        
+
         .auth-header h2 {
             color: var(--primary-green);
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
         }
-        
+
         .auth-header p {
             color: var(--dark-gray);
             font-size: 0.95rem;
         }
-        
+
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
-        
+
         .form-group {
             margin-bottom: 1.5rem;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
@@ -154,7 +168,7 @@
             font-weight: 500;
             font-size: 0.9rem;
         }
-        
+
         .form-group input,
         .form-group select {
             width: 100%;
@@ -164,25 +178,25 @@
             font-size: 1rem;
             transition: all 0.3s ease;
         }
-        
+
         .form-group input:focus,
         .form-group select:focus {
             outline: none;
             border-color: var(--primary-green);
             box-shadow: 0 0 0 3px rgba(45, 122, 45, 0.1);
         }
-        
+
         .password-requirements {
             font-size: 0.8rem;
             color: var(--dark-gray);
             margin-top: 0.5rem;
             line-height: 1.4;
         }
-        
+
         .terms-checkbox {
             margin-bottom: 1.5rem;
         }
-        
+
         .terms-checkbox label {
             display: flex;
             align-items: flex-start;
@@ -190,21 +204,21 @@
             color: var(--dark-gray);
             cursor: pointer;
         }
-        
+
         .terms-checkbox input {
             margin-right: 0.5rem;
             margin-top: 0.2rem;
         }
-        
+
         .terms-checkbox a {
             color: var(--primary-green);
             text-decoration: none;
         }
-        
+
         .terms-checkbox a:hover {
             text-decoration: underline;
         }
-        
+
         .auth-button {
             width: 100%;
             background: var(--primary-green);
@@ -218,19 +232,19 @@
             transition: all 0.3s ease;
             margin-bottom: 1rem;
         }
-        
+
         .auth-button:hover {
             background: var(--dark-green);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(45, 122, 45, 0.3);
         }
-        
+
         .auth-divider {
             text-align: center;
             margin: 1.5rem 0;
             position: relative;
         }
-        
+
         .auth-divider::before {
             content: '';
             position: absolute;
@@ -240,20 +254,20 @@
             height: 1px;
             background: var(--medium-gray);
         }
-        
+
         .auth-divider span {
             background: white;
             padding: 0 1rem;
             color: var(--dark-gray);
             font-size: 0.9rem;
         }
-        
+
         .social-login {
             display: flex;
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .social-button {
             flex: 1;
             padding: 10px;
@@ -265,53 +279,54 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
-        
+
         .social-button:hover {
             border-color: var(--primary-green);
             background: var(--light-gray);
         }
-        
+
         .auth-footer {
             text-align: center;
             font-size: 0.9rem;
             color: var(--dark-gray);
         }
-        
+
         .auth-footer a {
             color: var(--primary-green);
             text-decoration: none;
             font-weight: 500;
         }
-        
+
         .auth-footer a:hover {
             text-decoration: underline;
         }
-        
+
         @media (max-width: 768px) {
             .auth-container {
                 grid-template-columns: 1fr;
                 max-width: 400px;
             }
-            
+
             .auth-left {
                 display: none;
             }
-            
+
             .auth-right {
                 padding: 2rem;
             }
-            
+
             .form-row {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Simplified Header for Auth Pages -->
     <header class="simplified">
         <nav>
-            <a href="index.html" class="logo">EcoPure Cleaning Services</a>
+            <a href="index.html" class="logo"><i class="fas fa-leaf"></i>EcoPure Cleaning Services</a>
         </nav>
     </header>
 
@@ -319,32 +334,33 @@
         <div class="auth-container">
             <div class="auth-left">
                 <h2>Join EcoPure Today!</h2>
-                <p>Create your account and start your journey to a cleaner, greener home with exclusive member benefits.</p>
-                
+                <p>Create your account and start your journey to a cleaner, greener home with exclusive member benefits.
+                </p>
+
                 <div class="auth-benefits">
                     <div class="auth-benefit">
-                        <div class="auth-benefit-icon">🌱</div>
+                        <div class="auth-benefit-icon"><i class="fas fa-seedling"></i></div>
                         <div class="auth-benefit-content">
                             <h4>First Booking Free</h4>
                             <p>Get your first eco-cleaning service completely free</p>
                         </div>
                     </div>
                     <div class="auth-benefit">
-                        <div class="auth-benefit-icon">💰</div>
+                        <div class="auth-benefit-icon"><i class="fas fa-tags"></i></div>
                         <div class="auth-benefit-content">
                             <h4>Member Discounts</h4>
                             <p>Save 15% on all future cleaning services</p>
                         </div>
                     </div>
                     <div class="auth-benefit">
-                        <div class="auth-benefit-icon">🎯</div>
+                        <div class="auth-benefit-icon"><i class="fas fa-calendar-check"></i></div>
                         <div class="auth-benefit-content">
                             <h4>Priority Scheduling</h4>
                             <p>Get preferred time slots and faster booking</p>
                         </div>
                     </div>
                     <div class="auth-benefit">
-                        <div class="auth-benefit-icon">📱</div>
+                        <div class="auth-benefit-icon"><i class="fas fa-mobile-screen-button"></i></div>
                         <div class="auth-benefit-content">
                             <h4>Mobile App Access</h4>
                             <p>Manage bookings on the go with our app</p>
@@ -352,14 +368,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="auth-right">
                 <form class="auth-form" id="registerForm">
                     <div class="auth-header">
                         <h2>Create Account</h2>
                         <p>Join our eco-friendly cleaning community</p>
                     </div>
-                    
+
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
@@ -370,48 +386,75 @@
                             <input type="text" id="lastName" name="lastName" required placeholder="Enter last name">
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        <div style="position: relative;">
+                            <i class="fas fa-envelope"
+                                style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--dark-gray); opacity: 0.7;"></i>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email"
+                                style="padding-left: 45px;">
+                        </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+                        <div style="position: relative;">
+                            <i class="fas fa-phone"
+                                style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--dark-gray); opacity: 0.7;"></i>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter phone number"
+                                style="padding-left: 45px;">
+                        </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required placeholder="Create password">
+                        <div style="position: relative;">
+                            <i class="fas fa-lock"
+                                style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--dark-gray); opacity: 0.7;"></i>
+                            <input type="password" id="password" name="password" required placeholder="Create password"
+                                style="padding-left: 45px;">
+                            <i class="fas fa-eye-slash toggle-password" data-target="password"
+                                style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--dark-gray); opacity: 0.7;"></i>
+                        </div>
                         <div class="password-requirements">
                             Minimum 8 characters, include uppercase, lowercase, and number
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm password">
+                        <div style="position: relative;">
+                            <i class="fas fa-shield-halved"
+                                style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--dark-gray); opacity: 0.7;"></i>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required
+                                placeholder="Confirm password" style="padding-left: 45px;">
+                            <i class="fas fa-eye-slash toggle-password" data-target="confirmPassword"
+                                style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--dark-gray); opacity: 0.7;"></i>
+                        </div>
                     </div>
-                    
+
                     <div class="terms-checkbox">
                         <label>
                             <input type="checkbox" name="terms" required>
-                            I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy-policy.html">Privacy Policy</a>
+                            I agree to the <a href="terms.html">Terms of Service</a> and <a
+                                href="privacy-policy.html">Privacy Policy</a>
                         </label>
                     </div>
-                    
+
                     <button type="submit" class="auth-button">Create Account</button>
-                    
+
                     <div class="auth-divider">
                         <span>OR</span>
                     </div>
-                    
+
                     <div class="social-login">
-                        <button type="button" class="social-button">Google</button>
-                        <button type="button" class="social-button">Facebook</button>
+                        <button type="button" class="social-button"><i class="fab fa-google"
+                                style="margin-right: 8px; color: #DB4437;"></i>Google</button>
+                        <button type="button" class="social-button"><i class="fab fa-facebook-f"
+                                style="margin-right: 8px; color: #4267B2;"></i>Facebook</button>
                     </div>
-                    
+
                     <div class="auth-footer">
                         Already have an account? <a href="login.html">Login</a>
                     </div>
@@ -419,22 +462,82 @@
             </div>
         </div>
     </div>
-    
+
+    <script src="js/theme.js"></script>
     <script>
-        document.getElementById('registerForm').addEventListener('submit', function(e) {
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
+            // Get form values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
-            
+            const termsAccepted = document.querySelector('input[name="terms"]').checked;
+
+            // Validation
+            if (!firstName || !lastName || !email || !password || !confirmPassword) {
+                alert('Please fill in all required fields');
+                return;
+            }
+
+            if (!email.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+
+            if (password.length < 8) {
+                alert('Password must be at least 8 characters long');
+                return;
+            }
+
             if (password !== confirmPassword) {
                 alert('Passwords do not match!');
                 return;
             }
-            
-            // Add registration logic here
-            alert('Registration functionality would be implemented here');
+
+            if (!termsAccepted) {
+                alert('Please accept the Terms of Service and Privacy Policy');
+                return;
+            }
+
+            // Simulate registration (in real app, this would be an API call)
+            console.log('Registration attempt:', { firstName, lastName, email, phone });
+
+            // Show success message
+            const button = document.querySelector('.auth-button');
+            const originalText = button.textContent;
+            button.textContent = 'Creating Account...';
+            button.disabled = true;
+
+            setTimeout(() => {
+                alert('Account created successfully! Redirecting to login...');
+                window.location.href = 'login.html';
+            }, 1500);
+        });
+
+        // Password visibility toggle
+        document.querySelectorAll('.toggle-password').forEach(toggle => {
+            toggle.addEventListener('click', function () {
+                const targetId = this.getAttribute('data-target');
+                const passwordField = document.getElementById(targetId);
+                const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordField.setAttribute('type', type);
+                this.classList.toggle('fa-eye');
+                this.classList.toggle('fa-eye-slash');
+            });
+        });
+
+        // Social login handlers
+        document.querySelectorAll('.social-button').forEach(button => {
+            button.addEventListener('click', function () {
+                const provider = this.textContent.trim();
+                alert(`${provider} registration would be implemented here`);
+            });
         });
     </script>
 </body>
+
 </html>

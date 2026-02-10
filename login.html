@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - EcoPure Cleaning Services</title>
-    <meta name="description" content="Login to your EcoPure Cleaning Services account to manage bookings and access exclusive features.">
+    <meta name="description"
+        content="Login to your EcoPure Cleaning Services account to manage bookings and access exclusive features.">
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <!-- Font Awesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
         .auth-page {
@@ -15,11 +22,11 @@
             justify-content: center;
             padding: 2rem;
         }
-        
+
         .auth-container {
             background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             max-width: 900px;
             width: 100%;
@@ -27,7 +34,7 @@
             grid-template-columns: 1fr 1fr;
             min-height: 600px;
         }
-        
+
         .auth-left {
             background: linear-gradient(135deg, var(--primary-green), var(--eco-blue));
             color: white;
@@ -38,7 +45,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .auth-left::before {
             content: '';
             position: absolute;
@@ -46,22 +53,29 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
             animation: float 20s infinite ease-in-out;
         }
-        
+
         @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(-30px, -30px) rotate(180deg); }
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            50% {
+                transform: translate(-30px, -30px) rotate(180deg);
+            }
         }
-        
+
         .auth-left h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
             position: relative;
             z-index: 1;
         }
-        
+
         .auth-left p {
             margin-bottom: 2rem;
             opacity: 0.9;
@@ -69,20 +83,20 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .auth-features {
             position: relative;
             z-index: 1;
         }
-        
+
         .auth-feature {
             display: flex;
             align-items: center;
             margin-bottom: 1rem;
         }
-        
+
         .auth-feature-icon {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -92,40 +106,40 @@
             margin-right: 1rem;
             font-size: 1.2rem;
         }
-        
+
         .auth-right {
             padding: 3rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        
+
         .auth-form {
             max-width: 400px;
             margin: 0 auto;
             width: 100%;
         }
-        
+
         .auth-header {
             text-align: center;
             margin-bottom: 2rem;
         }
-        
+
         .auth-header h2 {
             color: var(--primary-green);
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
         }
-        
+
         .auth-header p {
             color: var(--dark-gray);
             font-size: 0.95rem;
         }
-        
+
         .form-group {
             margin-bottom: 1.5rem;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
@@ -133,7 +147,7 @@
             font-weight: 500;
             font-size: 0.9rem;
         }
-        
+
         .form-group input {
             width: 100%;
             padding: 12px 16px;
@@ -142,13 +156,13 @@
             font-size: 1rem;
             transition: all 0.3s ease;
         }
-        
+
         .form-group input:focus {
             outline: none;
             border-color: var(--primary-green);
             box-shadow: 0 0 0 3px rgba(45, 122, 45, 0.1);
         }
-        
+
         .form-options {
             display: flex;
             justify-content: space-between;
@@ -156,26 +170,26 @@
             margin-bottom: 1.5rem;
             font-size: 0.9rem;
         }
-        
+
         .remember-me {
             display: flex;
             align-items: center;
         }
-        
+
         .remember-me input {
             margin-right: 0.5rem;
         }
-        
+
         .forgot-password {
             color: var(--primary-green);
             text-decoration: none;
             font-weight: 500;
         }
-        
+
         .forgot-password:hover {
             text-decoration: underline;
         }
-        
+
         .auth-button {
             width: 100%;
             background: var(--primary-green);
@@ -189,19 +203,19 @@
             transition: all 0.3s ease;
             margin-bottom: 1rem;
         }
-        
+
         .auth-button:hover {
             background: var(--dark-green);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(45, 122, 45, 0.3);
         }
-        
+
         .auth-divider {
             text-align: center;
             margin: 1.5rem 0;
             position: relative;
         }
-        
+
         .auth-divider::before {
             content: '';
             position: absolute;
@@ -211,20 +225,20 @@
             height: 1px;
             background: var(--medium-gray);
         }
-        
+
         .auth-divider span {
             background: white;
             padding: 0 1rem;
             color: var(--dark-gray);
             font-size: 0.9rem;
         }
-        
+
         .social-login {
             display: flex;
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .social-button {
             flex: 1;
             padding: 10px;
@@ -236,49 +250,50 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
-        
+
         .social-button:hover {
             border-color: var(--primary-green);
             background: var(--light-gray);
         }
-        
+
         .auth-footer {
             text-align: center;
             font-size: 0.9rem;
             color: var(--dark-gray);
         }
-        
+
         .auth-footer a {
             color: var(--primary-green);
             text-decoration: none;
             font-weight: 500;
         }
-        
+
         .auth-footer a:hover {
             text-decoration: underline;
         }
-        
+
         @media (max-width: 768px) {
             .auth-container {
                 grid-template-columns: 1fr;
                 max-width: 400px;
             }
-            
+
             .auth-left {
                 display: none;
             }
-            
+
             .auth-right {
                 padding: 2rem;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Simplified Header for Auth Pages -->
     <header class="simplified">
         <nav>
-            <a href="index.html" class="logo">EcoPure Cleaning Services</a>
+            <a href="index.html" class="logo"><i class="fas fa-leaf"></i>EcoPure Cleaning Services</a>
         </nav>
     </header>
 
@@ -286,25 +301,26 @@
         <div class="auth-container">
             <div class="auth-left">
                 <h2>Welcome Back!</h2>
-                <p>Access your EcoPure account to manage bookings, track cleaning history, and enjoy exclusive member benefits.</p>
-                
+                <p>Access your EcoPure account to manage bookings, track cleaning history, and enjoy exclusive member
+                    benefits.</p>
+
                 <div class="auth-features">
                     <div class="auth-feature">
-                        <div class="auth-feature-icon">📅</div>
+                        <div class="auth-feature-icon"><i class="fas fa-calendar-alt"></i></div>
                         <div>
                             <strong>Easy Booking</strong>
                             <p style="font-size: 0.9rem; margin: 0;">Schedule cleanings in seconds</p>
                         </div>
                     </div>
                     <div class="auth-feature">
-                        <div class="auth-feature-icon">📊</div>
+                        <div class="auth-feature-icon"><i class="fas fa-history"></i></div>
                         <div>
                             <strong>Service History</strong>
                             <p style="font-size: 0.9rem; margin: 0;">Track all your cleaning services</p>
                         </div>
                     </div>
                     <div class="auth-feature">
-                        <div class="auth-feature-icon">🎁</div>
+                        <div class="auth-feature-icon"><i class="fas fa-gift"></i></div>
                         <div>
                             <strong>Member Rewards</strong>
                             <p style="font-size: 0.9rem; margin: 0;">Exclusive discounts and offers</p>
@@ -312,24 +328,36 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="auth-right">
                 <form class="auth-form" id="loginForm">
                     <div class="auth-header">
                         <h2>Login</h2>
                         <p>Access your EcoPure account</p>
                     </div>
-                    
-                    <div class="form-group">
+
+                    <div class="form-group" style="position: relative;">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        <div style="position: relative;">
+                            <i class="fas fa-envelope"
+                                style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--dark-gray); opacity: 0.7;"></i>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email"
+                                style="padding-left: 45px;">
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
+
+                    <div class="form-group" style="position: relative;">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                        <div style="position: relative;">
+                            <i class="fas fa-lock"
+                                style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--dark-gray); opacity: 0.7;"></i>
+                            <input type="password" id="password" name="password" required
+                                placeholder="Enter your password" style="padding-left: 45px;">
+                            <i class="fas fa-eye-slash" id="togglePassword"
+                                style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--dark-gray); opacity: 0.7;"></i>
+                        </div>
                     </div>
-                    
+
                     <div class="form-options">
                         <label class="remember-me">
                             <input type="checkbox" name="remember">
@@ -337,18 +365,20 @@
                         </label>
                         <a href="#" class="forgot-password">Forgot password?</a>
                     </div>
-                    
+
                     <button type="submit" class="auth-button">Login to Account</button>
-                    
+
                     <div class="auth-divider">
                         <span>OR</span>
                     </div>
-                    
+
                     <div class="social-login">
-                        <button type="button" class="social-button">Google</button>
-                        <button type="button" class="social-button">Facebook</button>
+                        <button type="button" class="social-button"><i class="fab fa-google"
+                                style="margin-right: 8px; color: #DB4437;"></i>Google</button>
+                        <button type="button" class="social-button"><i class="fab fa-facebook-f"
+                                style="margin-right: 8px; color: #4267B2;"></i>Facebook</button>
                     </div>
-                    
+
                     <div class="auth-footer">
                         Don't have an account? <a href="register.html">Sign up</a>
                     </div>
@@ -356,13 +386,64 @@
             </div>
         </div>
     </div>
-    
+
+    <script src="js/theme.js"></script>
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            // Add login logic here
-            alert('Login functionality would be implemented here');
+
+            // Get form values
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const remember = document.querySelector('input[name="remember"]').checked;
+
+            // Basic validation
+            if (!email || !password) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            if (!email.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+
+            // Simulate login (in real app, this would be an API call)
+            console.log('Login attempt:', { email, remember });
+
+            // Show success message
+            const button = document.querySelector('.auth-button');
+            const originalText = button.textContent;
+            button.textContent = 'Logging in...';
+            button.disabled = true;
+
+            setTimeout(() => {
+                alert('Login successful! Redirecting to dashboard...');
+                // In real app: window.location.href = 'dashboard.html';
+                button.textContent = originalText;
+                button.disabled = false;
+            }, 1500);
+        });
+
+        // Password visibility toggle
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordField = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+
+        // Social login handlers
+        document.querySelectorAll('.social-button').forEach(button => {
+            button.addEventListener('click', function () {
+                const provider = this.textContent.trim();
+                alert(`${provider} login would be implemented here`);
+            });
         });
     </script>
 </body>
+
 </html>
