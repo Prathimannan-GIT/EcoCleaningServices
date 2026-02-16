@@ -13,6 +13,198 @@
     <!-- Font Awesome for professional icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Inline Dark Mode Styles for Login Page -->
+    <style>
+        [data-theme="dark"] .auth-page {
+            background: linear-gradient(135deg, var(--dark-gray), var(--medium-gray));
+        }
+        
+        [data-theme="dark"] .auth-card {
+            background: #ffffff !important;
+            color: #000000 !important;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
+        }
+        
+        [data-theme="dark"] .auth-card * {
+            color: #000000 !important;
+        }
+        
+        [data-theme="dark"] .auth-card h2,
+        [data-theme="dark"] .auth-card .logo {
+            color: var(--primary-green) !important;
+        }
+        
+        [data-theme="dark"] .auth-card .form-group label {
+            color: #000000 !important;
+            font-weight: 700 !important;
+        }
+        
+        [data-theme="dark"] .auth-card .form-group input {
+            background: #f8f9fa !important;
+            color: #000000 !important;
+            border: 2px solid #495057 !important;
+        }
+        
+        [data-theme="dark"] .auth-card .form-group input::placeholder {
+            color: #6c757d !important;
+        }
+        
+        [data-theme="dark"] .auth-card .remember-me label {
+            color: #000000 !important;
+            font-weight: 600 !important;
+        }
+        
+        [data-theme="dark"] .auth-card .forgot-password a {
+            color: var(--primary-green) !important;
+        }
+        
+        [data-theme="dark"] .auth-card .forgot-password a:hover {
+            color: var(--dark-green) !important;
+        }
+        
+        [data-theme="dark"] .auth-card .divider {
+            color: #000000 !important;
+        }
+        
+        [data-theme="dark"] .auth-card .social-login p {
+            color: #000000 !important;
+        }
+        
+        [data-theme="dark"] .auth-card .signup-link {
+            color: #000000 !important;
+        }
+        
+        [data-theme="dark"] .auth-card .signup-link a {
+            color: var(--primary-green) !important;
+        }
+        
+        [data-theme="dark"] .auth-card .signup-link a:hover {
+            color: var(--dark-green) !important;
+        }
+        
+        /* Override any light text */
+        [data-theme="dark"] .auth-card div[style*="color: var(--dark-gray)"] {
+            color: #000000 !important;
+        }
+        
+        /* Maximum specificity overrides */
+        html[data-theme="dark"] body .auth-page .auth-card {
+            background: #ffffff !important;
+            color: #000000 !important;
+        }
+        
+        html[data-theme="dark"] body .auth-page .auth-card * {
+            color: #000000 !important;
+        }
+        
+        html[data-theme="dark"] body .auth-page .auth-card h2,
+        html[data-theme="dark"] body .auth-page .auth-card .logo {
+            color: var(--primary-green) !important;
+        }
+        
+        html[data-theme="dark"] body .auth-page .auth-card .form-group label {
+            color: #000000 !important;
+            font-weight: 700 !important;
+        }
+        
+        html[data-theme="dark"] body .auth-page .auth-card .form-group input {
+            background: #f8f9fa !important;
+            color: #000000 !important;
+            border: 2px solid #495057 !important;
+        }
+        
+        html[data-theme="dark"] body .auth-page .auth-card .remember-me label {
+            color: #000000 !important;
+        }
+        
+        html[data-theme="dark"] body .auth-page .auth-card .forgot-password a {
+            color: var(--primary-green) !important;
+        }
+        
+        html[data-theme="dark"] body .auth-page .auth-card .signup-link {
+            color: #000000 !important;
+        }
+        
+        html[data-theme="dark"] body .auth-page .auth-card .signup-link a {
+            color: var(--primary-green) !important;
+        }
+        
+        /* Force override any remaining light text */
+        html[data-theme="dark"] body .auth-page .auth-card p,
+        html[data-theme="dark"] body .auth-page .auth-card span,
+        html[data-theme="dark"] body .auth-page .auth-card div {
+            color: #000000 !important;
+        }
+        
+        /* Ultimate force overrides - crush all CSS variables */
+        html[data-theme="dark"] {
+            --dark-gray: #000000 !important;
+            --text-color: #000000 !important;
+            --light-gray: #f8f9fa !important;
+        }
+        
+        /* Force all elements to use black text */
+        html[data-theme="dark"] * {
+            color: inherit !important;
+        }
+        
+        html[data-theme="dark"] .auth-card {
+            color: #000000 !important;
+        }
+        
+        html[data-theme="dark"] .auth-card * {
+            color: #000000 !important;
+        }
+        
+        /* Override any element with light text */
+        html[data-theme="dark"] [style*="color: var(--dark-gray)"],
+        html[data-theme="dark"] [style*="color: var(--text-color)"] {
+            color: #000000 !important;
+        }
+        
+        /* Force override for all text elements */
+        html[data-theme="dark"] .auth-card h1,
+        html[data-theme="dark"] .auth-card h2,
+        html[data-theme="dark"] .auth-card h3,
+        html[data-theme="dark"] .auth-card h4,
+        html[data-theme="dark"] .auth-card h5,
+        html[data-theme="dark"] .auth-card h6,
+        html[data-theme="dark"] .auth-card p,
+        html[data-theme="dark"] .auth-card span,
+        html[data-theme="dark"] .auth-card div,
+        html[data-theme="dark"] .auth-card label,
+        html[data-theme="dark"] .auth-card input {
+            color: #000000 !important;
+        }
+        
+        /* Keep green elements green */
+        html[data-theme="dark"] .auth-card h2,
+        html[data-theme="dark"] .auth-card .logo,
+        html[data-theme="dark"] .auth-card a {
+            color: var(--primary-green) !important;
+        }
+        
+        /* Final universal override */
+        html[data-theme="dark"] body .auth-page .auth-card {
+            background: #ffffff !important;
+            color: #000000 !important;
+        }
+        
+        html[data-theme="dark"] body .auth-page .auth-card * {
+            color: #000000 !important;
+        }
+        
+        html[data-theme="dark"] body .auth-page .auth-card h2,
+        html[data-theme="dark"] body .auth-page .auth-card .logo {
+            color: var(--primary-green) !important;
+        }
+        
+        html[data-theme="dark"] body .auth-page .auth-card a {
+            color: var(--primary-green) !important;
+        }
+    </style>
+    
     <style>
         .auth-page {
             min-height: calc(100vh - var(--navbar-height));
@@ -320,7 +512,7 @@
         <div class="auth-container">
             <div class="auth-left">
                 <h2>Welcome Back!</h2>
-                <p>Access your EcoPure account to manage bookings, track cleaning history, and enjoy exclusive member
+                <p>Access your Eco Cleaning account to manage bookings, track cleaning history, and enjoy exclusive member
                     benefits.</p>
 
                 <div class="auth-features">
@@ -352,7 +544,7 @@
                 <form class="auth-form" id="loginForm">
                     <div class="auth-header">
                         <h2>Login</h2>
-                        <p>Access your EcoPure account</p>
+                        <p>Access your Eco Cleaning account</p>
                     </div>
 
                     <div class="form-group" style="position: relative;">

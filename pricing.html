@@ -13,27 +13,102 @@
     <!-- Font Awesome for professional icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Inline Dark Mode Styles for Pricing Page -->
+    <style>
+        [data-theme="dark"] .services {
+            background: var(--medium-gray);
+        }
+        
+        [data-theme="dark"] .features {
+            background: var(--medium-gray);
+        }
+        
+        [data-theme="dark"] .testimonials {
+            background: var(--medium-gray);
+        }
+        
+        /* Force all pricing cards to be visible */
+        [data-theme="dark"] div[style*="background: white"] {
+            background: #ffffff !important;
+            color: #000000 !important;
+        }
+        
+        [data-theme="dark"] div[style*="background: white"] * {
+            color: #000000 !important;
+        }
+        
+        /* Keep important elements green */
+        [data-theme="dark"] div[style*="background: white"] h3,
+        [data-theme="dark"] div[style*="background: white"] div[style*="font-size: 3.5rem"],
+        [data-theme="dark"] div[style*="background: white"] h4[style*="color: var(--primary-green)"] {
+            color: var(--primary-green) !important;
+        }
+        
+        /* Force list items and paragraphs */
+        [data-theme="dark"] div[style*="background: white"] p,
+        [data-theme="dark"] div[style*="background: white"] li {
+            color: #000000 !important;
+            font-weight: 600 !important;
+        }
+        
+        /* "Perfect for" boxes */
+        [data-theme="dark"] div[style*="background: var(--light-gray)"] {
+            background: #f8f9fa !important;
+            color: #000000 !important;
+        }
+        
+        [data-theme="dark"] div[style*="background: var(--light-gray)"] * {
+            color: #000000 !important;
+        }
+        
+        /* Override any CSS variables */
+        [data-theme="dark"] div[style*="color: var(--dark-gray)"] {
+            color: #000000 !important;
+        }
+        
+        /* Universal override for pricing page */
+        [data-theme="dark"] .services * {
+            color: inherit !important;
+        }
+        
+        [data-theme="dark"] .services div[style*="background: white"] {
+            color: #000000 !important;
+        }
+        
+        [data-theme="dark"] .services div[style*="background: white"] * {
+            color: #000000 !important;
+        }
+        
+        /* Restore green for headings */
+        [data-theme="dark"] .services div[style*="background: white"] h3,
+        [data-theme="dark"] .services div[style*="background: white"] div[style*="font-size: 3.5rem"] {
+            color: var(--primary-green) !important;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <nav>
             <a href="index.html" class="logo"><i class="fas fa-leaf"></i>Eco Cleaning</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="home2.html">Home 2</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="pricing.html" class="active">Pricing</a></li>
-                <li><a href="booking.html">Book Now</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="header-actions">
-                    <div class="auth-links">
-                        <a href="login.html" class="secondary-button">Login</a>
-                        <a href="register.html" class="cta-button">Register</a>
-                    </div>
-                </li>
-            </ul>
+            <div class="nav-wrapper">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home2.html">Home 2</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html" class="active">Pricing</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="header-actions">
+                <div class="auth-links">
+                    <a href="login.html" class="secondary-button">Login</a>
+                    <a href="register.html" class="cta-button">Register</a>
+                </div>
+            </div>
             <button class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fas fa-bars"></i></button>
         </nav>
     </header>
@@ -584,7 +659,7 @@
         <button class="chatbot-toggle" id="chatbotToggle"><i class="fas fa-comment-dots"></i></button>
         <div class="chatbot-window" id="chatbotWindow">
             <div class="chatbot-header">
-                <span>🌱 EcoPure Assistant</span>
+                <span>🌱 Eco Cleaning Assistant</span>
                 <button class="chatbot-close" id="chatbotClose">✕</button>
             </div>
             <div class="chatbot-messages" id="chatbotMessages">
