@@ -1440,6 +1440,10 @@ footer {
     color: var(--light-green);
 }
 
+[data-theme="dark"] .tech-icon i {
+    color: white !important;
+}
+
 [data-theme="dark"] .eco-lifestyle {
     background: linear-gradient(135deg, var(--dark-green), var(--eco-blue));
 }
@@ -2576,4 +2580,101 @@ footer .footer-section {
     footer .footer-section .social-media {
         margin-top: 1rem !important;
     }
+}
+
+/* =========================
+   CONTACT PAGE DARK MODE FIXES
+   ========================= */
+
+/* Contact page "Don't see your area" text section */
+[data-theme="dark"] .services > .container > div[style*="text-align: center; margin-top: 3rem;"] {
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] .services > .container > div[style*="text-align: center; margin-top: 3rem;"] p {
+    color: var(--dark-gray) !important;
+}
+
+/* Service Areas section - SPECIFIC OVERRIDES */
+[data-theme="dark"] #service-areas > .container > div[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;"] {
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] #service-areas > .container > div[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;"] > div {
+    background: var(--white) !important;
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] #service-areas > .container > div[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;"] > div h3 {
+    color: var(--primary-green) !important;
+}
+
+[data-theme="dark"] #service-areas > .container > div[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;"] > div ul {
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] #service-areas > .container > div[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;"] > div ul li {
+    color: var(--dark-gray) !important;
+}
+
+/* Business Hours section - SPECIFIC OVERRIDES */
+[data-theme="dark"] .features > .container > .grid-auto-fit-3 {
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] .features > .container > .grid-auto-fit-3 > div {
+    background: var(--white) !important;
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] .features > .container > .grid-auto-fit-3 > div h3 {
+    color: var(--primary-green) !important;
+}
+
+[data-theme="dark"] .features > .container > .grid-auto-fit-3 > div p {
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] .features > .container > .grid-auto-fit-3 > div div {
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] .features > .container > .grid-auto-fit-3 > div div span {
+    color: var(--dark-gray) !important;
+}
+
+/* More specific Business Hours overrides */
+[data-theme="dark"] .features section > .container > div.grid-auto-fit-3 > div[style*="background: white"] {
+    background: var(--white) !important;
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] .features section > .container > div.grid-auto-fit-3 > div[style*="background: white"] h3 {
+    color: var(--primary-green) !important;
+}
+
+[data-theme="dark"] .features section > .container > div.grid-auto-fit-3 > div[style*="background: white"] div {
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] .features section > .container > div.grid-auto-fit-3 > div[style*="background: white"] div span {
+    color: var(--dark-gray) !important;
+}
+
+/* Service area lists dark mode - MORE SPECIFIC */
+[data-theme="dark"] .services > .container > div[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;"] > div {
+    background: var(--white) !important;
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] .services > .container > div[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;"] > div ul {
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] .services > .container > div[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;"] > div ul li {
+    color: var(--dark-gray) !important;
+}
+
+[data-theme="dark"] .features > .container > div[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;"] > div ul {
+    color: var(--dark-gray) !important;
 }
