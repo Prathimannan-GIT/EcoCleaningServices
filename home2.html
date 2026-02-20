@@ -100,8 +100,9 @@
         }
 
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 3rem;
             position: relative;
             z-index: 1;
@@ -121,6 +122,8 @@
             justify-content: center;
             align-items: center;
             min-height: 200px;
+            flex: 1 1 250px;
+            max-width: 350px;
         }
 
         .stat-card::before {
@@ -425,11 +428,11 @@
                     <li><a href="booking.html">Book Now</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </div>
-            <div class="header-actions">
-                <div class="auth-links">
-                    <a href="login.html" class="secondary-button">Login</a>
-                    <a href="register.html" class="cta-button">Register</a>
+                <div class="header-actions">
+                    <div class="auth-links">
+                        <a href="login.html" class="secondary-button">Login</a>
+                        <a href="register.html" class="cta-button">Register</a>
+                    </div>
                 </div>
             </div>
             <button class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fas fa-bars"></i></button>

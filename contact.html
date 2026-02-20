@@ -29,11 +29,11 @@
                     <li><a href="booking.html">Book Now</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
-            </div>
-            <div class="header-actions">
-                <div class="auth-links">
-                    <a href="login.html" class="secondary-button">Login</a>
-                    <a href="register.html" class="cta-button">Register</a>
+                <div class="header-actions">
+                    <div class="auth-links">
+                        <a href="login.html" class="secondary-button">Login</a>
+                        <a href="register.html" class="cta-button">Register</a>
+                    </div>
                 </div>
             </div>
             <button class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fas fa-bars"></i></button>
@@ -116,93 +116,103 @@
         </div>
     </section>
 
-    <!-- Contact Form -->
-    <section class="features">
+    <!-- Contact Form Section -->
+    <section class="contact-redesign">
         <div class="container">
-            <h2 class="section-title">Send Us a Message</h2>
-            <p class="section-subtitle">We'll get back to you within 24 hours</p>
+            <div class="contact-grid">
+                <!-- Contact Benefits / Info -->
+                <div class="contact-info-panel">
+                    <h2 class="section-title" style="text-align: left; padding-bottom: 5px;">Send Us a Message</h2>
+                    <p style="margin-bottom: 2rem; color: var(--dark-gray);">Have a specific inquiry? We're here to help
+                        you transition to a healthier, greener home or office. Fill out the form and our team will get
+                        back to you within 24 hours.</p>
 
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="success-message" id="contactSuccessMessage">
-                    🌱 Thank you for your message! We'll respond within 24 hours with the information you requested.
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                        <div class="benefit-text">
+                            <h4>Fast Response</h4>
+                            <p>We typically respond within one business day.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
+                        <div class="benefit-text">
+                            <h4>Expert Advice</h4>
+                            <p>Our eco-cleaning specialists can provide tailored solutions.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-shield-heart"></i></div>
+                        <div class="benefit-text">
+                            <h4>Safe & Secure</h4>
+                            <p>Your information is always protected and never shared.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <form id="contactForm" style="background: var(--light-gray); padding: 3rem; border-radius: 20px;">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="contactFirstName">First Name *</label>
-                            <input type="text" id="contactFirstName" name="firstName" required>
+                <!-- Redesigned Form -->
+                <div class="form-container-card">
+                    <div class="success-message" id="contactSuccessMessage">
+                        🌱 Message sent successfully! We'll be in touch soon.
+                    </div>
+
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group-modern">
+                                <label for="contactFirstName">First Name</label>
+                                <input type="text" id="contactFirstName" name="firstName" placeholder="John" required>
+                            </div>
+                            <div class="form-group-modern">
+                                <label for="contactLastName">Last Name</label>
+                                <input type="text" id="contactLastName" name="lastName" placeholder="Doe" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="contactLastName">Last Name *</label>
-                            <input type="text" id="contactLastName" name="lastName" required>
+
+                        <div class="form-row">
+                            <div class="form-group-modern">
+                                <label for="contactEmail">Email Address</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="john@example.com"
+                                    required>
+                            </div>
+                            <div class="form-group-modern">
+                                <label for="contactPhone">Phone Number</label>
+                                <input type="tel" id="contactPhone" name="phone" placeholder="(555) 000-0000">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="contactEmail">Email Address *</label>
-                            <input type="email" id="contactEmail" name="email" required>
+                        <div class="form-group-modern">
+                            <label for="contactSubject">Subject</label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="booking">Service Booking</option>
+                                <option value="quote">Request Quote</option>
+                                <option value="general">General Question</option>
+                                <option value="products">Product Information</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
-                        <div class="form-group">
-                            <label for="contactPhone">Phone Number</label>
-                            <input type="tel" id="contactPhone" name="phone" placeholder="(555) 123-4567">
+
+                        <div class="form-group-modern">
+                            <label for="contactMessage">Your Message</label>
+                            <textarea id="contactMessage" name="message" rows="4" required
+                                placeholder="How can we help clean your space?"></textarea>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="contactSubject">Subject *</label>
-                        <select id="contactSubject" name="subject" required>
-                            <option value="">Select a topic</option>
-                            <option value="booking">Service Booking</option>
-                            <option value="quote">Request Quote</option>
-                            <option value="general">General Question</option>
-                            <option value="products">Product Information</option>
-                            <option value="complaint">Service Feedback</option>
-                            <option value="partnership">Business Partnership</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
+                        <div class="form-checkbox-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="contactTerms" name="terms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="privacy-policy.html">Privacy Policy</a>
+                            </label>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="contactMessage">Message *</label>
-                        <textarea id="contactMessage" name="message" rows="5" required
-                            placeholder="Please tell us how we can help you..."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contactHowHeard">How did you hear about us?</label>
-                        <select id="contactHowHeard" name="howHeard">
-                            <option value="">Select an option</option>
-                            <option value="google">Google Search</option>
-                            <option value="referral">Friend/Family Referral</option>
-                            <option value="social">Social Media</option>
-                            <option value="advertisement">Advertisement</option>
-                            <option value="yelp">Yelp</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" id="contactNewsletter" name="newsletter">
-                            I'd like to receive eco-cleaning tips and special offers via email.
-                        </label>
-                    </div>
-
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" id="contactTerms" name="terms" required>
-                            I agree to the <a href="#" style="color: var(--primary-green);">Privacy Policy</a> and
-                            understand my information will be used to respond to my inquiry.
-                        </label>
-                    </div>
-
-                    <div style="text-align: center;">
-                        <button type="submit" class="cta-button" style="font-size: 1.1rem; padding: 15px 40px;">Send
-                            Message</button>
-                    </div>
-                </form>
+                        <button type="submit" class="submit-btn-modern">
+                            Send Message <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -213,11 +223,11 @@
             <h2 class="section-title">Our Service Areas</h2>
             <p class="section-subtitle">Eco-friendly cleaning throughout the California Bay Area</p>
 
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow);">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 3rem;">
+                <div
+                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); flex: 1 1 280px; max-width: 350px; text-align: center; display: flex; flex-direction: column; align-items: center;">
                     <h3 style="color: var(--primary-green); margin-bottom: 1rem;">San Francisco</h3>
-                    <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
+                    <ul style="padding: 0; font-size: 0.9rem; list-style-type: none; width: 100%;">
                         <li>Downtown</li>
                         <li>Mission District</li>
                         <li>Marina</li>
@@ -228,9 +238,10 @@
                     </ul>
                 </div>
 
-                <div style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow);">
+                <div
+                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); flex: 1 1 280px; max-width: 350px; text-align: center; display: flex; flex-direction: column; align-items: center;">
                     <h3 style="color: var(--primary-green); margin-bottom: 1rem;">East Bay</h3>
-                    <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
+                    <ul style="padding: 0; font-size: 0.9rem; list-style-type: none; width: 100%;">
                         <li>Oakland</li>
                         <li>Berkeley</li>
                         <li>Alameda</li>
@@ -241,9 +252,10 @@
                     </ul>
                 </div>
 
-                <div style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow);">
+                <div
+                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); flex: 1 1 280px; max-width: 350px; text-align: center; display: flex; flex-direction: column; align-items: center;">
                     <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Peninsula</h3>
-                    <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
+                    <ul style="padding: 0; font-size: 0.9rem; list-style-type: none; width: 100%;">
                         <li>San Mateo</li>
                         <li>Redwood City</li>
                         <li>Palo Alto</li>
@@ -254,9 +266,10 @@
                     </ul>
                 </div>
 
-                <div style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow);">
+                <div
+                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); flex: 1 1 280px; max-width: 350px; text-align: center; display: flex; flex-direction: column; align-items: center;">
                     <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Marin County</h3>
-                    <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
+                    <ul style="padding: 0; font-size: 0.9rem; list-style-type: none; width: 100%;">
                         <li>San Rafael</li>
                         <li>Novato</li>
                         <li>Mill Valley</li>
@@ -267,9 +280,10 @@
                     </ul>
                 </div>
 
-                <div style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow);">
+                <div
+                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); flex: 1 1 280px; max-width: 350px; text-align: center; display: flex; flex-direction: column; align-items: center;">
                     <h3 style="color: var(--primary-green); margin-bottom: 1rem;">South Bay</h3>
-                    <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
+                    <ul style="padding: 0; font-size: 0.9rem; list-style-type: none; width: 100%;">
                         <li>San Jose</li>
                         <li>Santa Clara</li>
                         <li>Cupertino</li>
@@ -280,9 +294,10 @@
                     </ul>
                 </div>
 
-                <div style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow);">
+                <div
+                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); flex: 1 1 280px; max-width: 350px; text-align: center; display: flex; flex-direction: column; align-items: center;">
                     <h3 style="color: var(--primary-green); margin-bottom: 1rem;">North Bay</h3>
-                    <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
+                    <ul style="padding: 0; font-size: 0.9rem; list-style-type: none; width: 100%;">
                         <li>Napa</li>
                         <li>Sonoma</li>
                         <li>Petaluma</li>
@@ -383,11 +398,10 @@
                 <p style="margin-bottom: 2rem;">We proudly serve the entire San Francisco Bay Area with eco-friendly
                     cleaning services</p>
 
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                    <div>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
+                    <div style="flex: 1 1 200px; max-width: 300px; text-align: center;">
                         <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">Counties Served</h4>
-                        <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
+                        <ul style="padding: 0; font-size: 0.9rem; list-style-type: none;">
                             <li>San Francisco</li>
                             <li>Alameda</li>
                             <li>Contra Costa</li>
@@ -399,9 +413,9 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div style="flex: 1 1 200px; max-width: 300px; text-align: center;">
                         <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">Major Cities</h4>
-                        <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
+                        <ul style="padding: 0; font-size: 0.9rem; list-style-type: none;">
                             <li>San Francisco</li>
                             <li>Oakland</li>
                             <li>San Jose</li>

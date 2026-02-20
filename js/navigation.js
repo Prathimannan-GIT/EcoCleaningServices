@@ -94,8 +94,10 @@ class NavigationManager {
         const navLinks = document.getElementById('navLinks');
 
         if (toggle && navLinks) {
+            const nav = document.querySelector('header nav');
             toggle.addEventListener('click', () => {
                 const isActive = navLinks.classList.toggle('active');
+                if (nav) nav.classList.toggle('menu-open');
                 toggle.classList.toggle('active');
 
                 // Toggle the icon between bars and times
@@ -198,8 +200,12 @@ window.addEventListener('resize', () => {
         if (window.innerWidth > 991) {
             const navLinks = document.getElementById('navLinks');
             const toggle = document.getElementById('mobileMenuToggle');
+            const header = document.querySelector('header');
             if (navLinks) {
                 navLinks.classList.remove('active');
+            }
+            if (header) {
+                header.classList.remove('menu-open');
             }
             if (toggle) {
                 toggle.classList.remove('active');

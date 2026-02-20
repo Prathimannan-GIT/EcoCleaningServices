@@ -29,11 +29,11 @@
                     <li><a href="booking.html" class="active">Book Now</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </div>
-            <div class="header-actions">
-                <div class="auth-links">
-                    <a href="login.html" class="secondary-button">Login</a>
-                    <a href="register.html" class="cta-button">Register</a>
+                <div class="header-actions">
+                    <div class="auth-links">
+                        <a href="login.html" class="secondary-button">Login</a>
+                        <a href="register.html" class="cta-button">Register</a>
+                    </div>
                 </div>
             </div>
             <button class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fas fa-bars"></i></button>
@@ -49,158 +49,116 @@
         </div>
     </section>
 
-    <!-- Booking Form Section -->
-    <section class="services">
+    <!-- Booking Redesign Section -->
+    <section class="booking-redesign">
         <div class="container">
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="success-message" id="successMessage">
-                    🌱 Thank you for your booking request! We'll contact you within 24 hours to confirm your
-                    eco-friendly cleaning service.
-                </div>
+            <div class="contact-grid">
+                <!-- Info Panel -->
+                <div class="contact-info-panel">
+                    <h2 class="section-title">Book Your Eco-Clean</h2>
+                    <p class="section-subtitle" style="text-align: left; margin-left: 0;">Experience the difference of
+                        professional green cleaning.</p>
 
-                <form id="bookingForm" style="background: var(--light-gray); padding: 3rem; border-radius: 20px;">
-                    <h2 style="text-align: center; color: var(--primary-green); margin-bottom: 2rem;">Service Booking
-                        Form</h2>
-
-                    <!-- Personal Information -->
-                    <div style="margin-bottom: 2rem;">
-                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Personal Information</h3>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" required>
-                            </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-heart"></i>
                         </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-                            </div>
+                        <div class="benefit-text">
+                            <h4>Safe & Non-Toxic</h4>
+                            <p>We use 100% biodegradable products safe for kids, pets, and the planet.</p>
                         </div>
                     </div>
 
-                    <!-- Service Details -->
-                    <div style="margin-bottom: 2rem;">
-                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Service Details</h3>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-sparkles"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Premium Quality</h4>
+                            <p>Our expert cleaners are trained to provide a deep, thorough clean every time.</p>
+                        </div>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="serviceType">Service Type *</label>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Easy Scheduling</h4>
+                            <p>Flexible booking options that fit your busy lifestyle and schedule.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="form-container-card">
+                    <div class="success-message" id="successMessage" style="margin-bottom: 2rem;">
+                        🌱 Thank you! Your booking request has been received.
+                    </div>
+
+                    <form id="bookingForm">
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Your first name"
+                                    required>
+                            </div>
+                            <div class="form-group-modern">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                            </div>
+                            <div class="form-group-modern">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group-modern">
+                            <label for="serviceType">Service Type</label>
                             <select id="serviceType" name="serviceType" required>
                                 <option value="">Select a service</option>
                                 <option value="residential-regular">Regular Residential Cleaning</option>
                                 <option value="residential-deep">Deep Residential Cleaning</option>
                                 <option value="residential-move">Move-In/Move-Out Cleaning</option>
-                                <option value="commercial-regular">Regular Commercial Cleaning</option>
-                                <option value="commercial-deep">Deep Commercial Cleaning</option>
-                                <option value="post-construction">Post-Construction Cleaning</option>
-                                <option value="event-cleanup">Event Cleanup</option>
-                                <option value="green-disinfection">Green Disinfection Service</option>
-                                <option value="allergy-safe">Allergy-Safe Cleaning</option>
-                                <option value="upholstery">Upholstery & Mattress Cleaning</option>
+                                <option value="commercial-office">Office Cleaning</option>
+                                <option value="specialized">Specialized Service</option>
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label for="propertyType">Property Type *</label>
-                            <select id="propertyType" name="propertyType" required>
-                                <option value="">Select property type</option>
-                                <option value="apartment">Apartment</option>
-                                <option value="house">House</option>
-                                <option value="villa">Villa</option>
-                                <option value="office">Office</option>
-                                <option value="retail">Retail Store</option>
-                                <option value="clinic">Clinic/Healthcare</option>
-                                <option value="school">Educational Facility</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="bedrooms">Number of Bedrooms</label>
-                                <input type="number" id="bedrooms" name="bedrooms" min="0" max="10" placeholder="0">
-                            </div>
-                            <div class="form-group">
-                                <label for="bathrooms">Number of Bathrooms</label>
-                                <input type="number" id="bathrooms" name="bathrooms" min="0" max="10" placeholder="0">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="squareFootage">Approximate Square Footage</label>
-                            <input type="number" id="squareFootage" name="squareFootage" min="0"
-                                placeholder="e.g., 1500">
-                        </div>
-                    </div>
-
-                    <!-- Scheduling -->
-                    <div style="margin-bottom: 2rem;">
-                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Preferred Schedule</h3>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="preferredDate">Preferred Date *</label>
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label for="preferredDate">Preferred Date</label>
                                 <input type="date" id="preferredDate" name="preferredDate" required>
                             </div>
-                            <div class="form-group">
-                                <label for="preferredTime">Preferred Time *</label>
+                            <div class="form-group-modern">
+                                <label for="preferredTime">Preferred Time</label>
                                 <select id="preferredTime" name="preferredTime" required>
                                     <option value="">Select time</option>
-                                    <option value="morning">Morning (8AM - 12PM)</option>
-                                    <option value="afternoon">Afternoon (12PM - 4PM)</option>
-                                    <option value="evening">Evening (4PM - 6PM)</option>
+                                    <option value="morning">Morning (8AM-12PM)</option>
+                                    <option value="afternoon">Afternoon (12PM-4PM)</option>
+                                    <option value="evening">Evening (4PM-6PM)</option>
                                 </select>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="frequency">Service Frequency</label>
-                            <select id="frequency" name="frequency">
-                                <option value="one-time">One-Time Service</option>
-                                <option value="weekly">Weekly</option>
-                                <option value="bi-weekly">Bi-Weekly</option>
-                                <option value="monthly">Monthly</option>
-                                <option value="custom">Custom Schedule</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Additional Information -->
-                    <div style="margin-bottom: 2rem;">
-                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Additional Information</h3>
-
-                        <div class="form-group">
-                            <label for="specialInstructions">Special Instructions or Requests</label>
-                            <textarea id="specialInstructions" name="specialInstructions" rows="4"
-                                placeholder="Please let us know about any specific cleaning needs, areas of concern, pets, allergies, or special instructions..."></textarea>
+                        <div class="form-group-modern">
+                            <label for="specialInstructions">Special Instructions</label>
+                            <textarea id="specialInstructions" name="specialInstructions" rows="3"
+                                placeholder="Tell us about your cleaning needs..."></textarea>
                         </div>
 
-                        <div class="form-group">
-                            <label for="accessInfo">Property Access Information</label>
-                            <textarea id="accessInfo" name="accessInfo" rows="3"
-                                placeholder="Gate codes, parking instructions, how to access the property, etc."></textarea>
-                        </div>
-
-
-                    </div>
-
-                    <div style="text-align: center;">
-                        <button type="submit" class="cta-button" style="font-size: 1.1rem; padding: 15px 40px;">Submit
-                            Booking Request</button>
-                        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--dark-gray);">
-                            We'll contact you within 24 hours to confirm your booking and provide a detailed quote.
-                        </p>
-                    </div>
-                </form>
+                        <button type="submit" class="submit-btn-modern" style="width: 100%;">
+                            Confirm Booking <i class="fas fa-check-circle" style="margin-left: 10px;"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

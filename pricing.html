@@ -13,73 +13,70 @@
     <!-- Font Awesome for professional icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- Inline Dark Mode Styles for Pricing Page -->
     <style>
-        [data-theme="dark"] .services {
-            background: var(--medium-gray);
-        }
-        
+        [data-theme="dark"] .services,
         [data-theme="dark"] .features {
-            background: var(--medium-gray);
+            background: var(--white) !important;
         }
-        
+
         [data-theme="dark"] .testimonials {
             background: var(--medium-gray);
         }
-        
+
         /* Force all pricing cards to be visible */
         [data-theme="dark"] div[style*="background: white"] {
             background: #ffffff !important;
             color: #000000 !important;
         }
-        
+
         [data-theme="dark"] div[style*="background: white"] * {
             color: #000000 !important;
         }
-        
+
         /* Keep important elements green */
         [data-theme="dark"] div[style*="background: white"] h3,
         [data-theme="dark"] div[style*="background: white"] div[style*="font-size: 3.5rem"],
         [data-theme="dark"] div[style*="background: white"] h4[style*="color: var(--primary-green)"] {
             color: var(--primary-green) !important;
         }
-        
+
         /* Force list items and paragraphs */
         [data-theme="dark"] div[style*="background: white"] p,
         [data-theme="dark"] div[style*="background: white"] li {
             color: #000000 !important;
             font-weight: 600 !important;
         }
-        
+
         /* "Perfect for" boxes */
         [data-theme="dark"] div[style*="background: var(--light-gray)"] {
             background: #f8f9fa !important;
             color: #000000 !important;
         }
-        
+
         [data-theme="dark"] div[style*="background: var(--light-gray)"] * {
             color: #000000 !important;
         }
-        
+
         /* Override any CSS variables */
         [data-theme="dark"] div[style*="color: var(--dark-gray)"] {
             color: #000000 !important;
         }
-        
+
         /* Universal override for pricing page */
         [data-theme="dark"] .services * {
             color: inherit !important;
         }
-        
+
         [data-theme="dark"] .services div[style*="background: white"] {
             color: #000000 !important;
         }
-        
+
         [data-theme="dark"] .services div[style*="background: white"] * {
             color: #000000 !important;
         }
-        
+
         /* Restore green for headings */
         [data-theme="dark"] .services div[style*="background: white"] h3,
         [data-theme="dark"] .services div[style*="background: white"] div[style*="font-size: 3.5rem"] {
@@ -102,11 +99,11 @@
                     <li><a href="booking.html">Book Now</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </div>
-            <div class="header-actions">
-                <div class="auth-links">
-                    <a href="login.html" class="secondary-button">Login</a>
-                    <a href="register.html" class="cta-button">Register</a>
+                <div class="header-actions">
+                    <div class="auth-links">
+                        <a href="login.html" class="secondary-button">Login</a>
+                        <a href="register.html" class="cta-button">Register</a>
+                    </div>
                 </div>
             </div>
             <button class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fas fa-bars"></i></button>
@@ -141,7 +138,7 @@
                         style="font-size: 3.5rem; color: var(--primary-green); font-weight: bold; margin-bottom: 0.75rem;">
                         $149</div>
                     <p style="color: var(--dark-gray); margin-bottom: 2.5rem; font-size: 1.1rem;">Starting price for
-                        apartments & small homes</p>
+                        apartments </p>
 
                     <div style="text-align: center; margin-bottom: 2rem;">
                         <h4 style="color: var(--primary-green); margin-bottom: 1.25rem; font-size: 1.25rem;"><i
@@ -173,7 +170,7 @@
                     style="background: white; border-radius: 20px; padding: 2.5rem; box-shadow: var(--shadow-hover); text-align: center; position: relative; border: 2px solid var(--primary-green); display: flex; flex-direction: column; transform: scale(1.05); z-index: 1;">
                     <div
                         style="position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: var(--primary-green); color: white; padding: 0.6rem 2rem; border-radius: 30px; font-size: 1rem; font-weight: 600; box-shadow: 0 5px 15px rgba(45,122,45,0.3);">
-                        Most Popular</div>
+                        Popular</div>
                     <h3 style="color: var(--primary-green); margin-bottom: 1.5rem; font-size: 1.5rem;">Standard Clean
                     </h3>
                     <div
@@ -220,7 +217,7 @@
 
                     <div style="text-align: center; margin-bottom: 2rem;">
                         <h4 style="color: var(--primary-green); margin-bottom: 1.25rem; font-size: 1.25rem;"><i
-                                class="fas fa-star" style="margin-right: 0.5rem;"></i>Everything in Standard Plus:</h4>
+                                class="fas fa-star" style="margin-right: 0.5rem;"></i>Standard Plus:</h4>
                         <ul style="padding: 0; line-height: 2; list-style-type: none;">
                             <li>Inside all cabinets & drawers</li>
                             <li>Behind & under furniture</li>
@@ -247,203 +244,7 @@
     </section>
 
     <!-- Commercial Pricing -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Commercial Cleaning Services</h2>
-            <p class="section-subtitle">Professional green cleaning for businesses</p>
 
-            <div class="grid-auto-fit-3" style="margin-top: 3rem;">
-                <!-- Small Office -->
-                <div
-                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); text-align: center;">
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Small Office</h3>
-                    <div
-                        style="font-size: 3rem; color: var(--primary-green); font-weight: bold; margin-bottom: 0.5rem;">
-                        $299</div>
-                    <p style="color: var(--dark-gray); margin-bottom: 2rem;">Per cleaning session</p>
-
-                    <div style="text-align: center; margin-bottom: 2rem;">
-                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Includes:</h4>
-                        <ul style="padding: 0; list-style-type: none;">
-                            <li>Up to 1,000 sq ft office space</li>
-                            <li>Daily trash removal</li>
-                            <li>Surface sanitization</li>
-                            <li>Floor care</li>
-                            <li>Restroom cleaning</li>
-                            <li>Break room cleaning</li>
-                        </ul>
-                    </div>
-
-                    <div
-                        style="background: var(--light-gray); padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">Frequency Options:</h4>
-                        <p style="font-size: 0.9rem; margin: 0;">Daily, Weekly, or Bi-weekly service available</p>
-                    </div>
-
-                    <a href="booking.html" class="cta-button">Get Office Quote</a>
-                </div>
-
-                <!-- Medium Office -->
-                <div
-                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); text-align: center; border: 2px solid var(--primary-green);">
-                    <div
-                        style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-green); color: white; padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.9rem;">
-                        Best Value</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Medium Office</h3>
-                    <div
-                        style="font-size: 3rem; color: var(--primary-green); font-weight: bold; margin-bottom: 0.5rem;">
-                        $499</div>
-                    <p style="color: var(--dark-gray); margin-bottom: 2rem;">Per cleaning session</p>
-
-                    <div style="text-align: center; margin-bottom: 2rem;">
-                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Includes:</h4>
-                        <ul style="padding: 0; list-style-type: none;">
-                            <li>1,000-2,500 sq ft office space</li>
-                            <li>Conference room cleaning</li>
-                            <li>Individual workstation cleaning</li>
-                            <li>Advanced floor care</li>
-                            <li>Window interior cleaning</li>
-                            <li>Supply restocking</li>
-                        </ul>
-                    </div>
-
-                    <div
-                        style="background: var(--light-gray); padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">Frequency Options:</h4>
-                        <p style="font-size: 0.9rem; margin: 0;">Daily, Weekly, or Bi-weekly service available</p>
-                    </div>
-
-                    <a href="booking.html" class="cta-button">Get Office Quote</a>
-                </div>
-
-                <!-- Large Facility -->
-                <div
-                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); text-align: center;">
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Large Facility</h3>
-                    <div
-                        style="font-size: 3rem; color: var(--primary-green); font-weight: bold; margin-bottom: 0.5rem;">
-                        Custom</div>
-                    <p style="color: var(--dark-gray); margin-bottom: 2rem;">Tailored pricing</p>
-
-                    <div style="text-align: center; margin-bottom: 2rem;">
-                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Includes:</h4>
-                        <ul style="padding: 0; list-style-type: none;">
-                            <li>2,500+ sq ft facilities</li>
-                            <li>Custom cleaning schedule</li>
-                            <li>Specialized equipment</li>
-                            <li>Multiple floor types</li>
-                            <li>High-traffic area focus</li>
-                            <li>Dedicated cleaning team</li>
-                        </ul>
-                    </div>
-
-                    <div
-                        style="background: var(--light-gray); padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem;">
-                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">Perfect for:</h4>
-                        <p style="font-size: 0.9rem; margin: 0;">Large offices, warehouses, retail spaces, medical
-                            facilities</p>
-                    </div>
-
-                    <a href="booking.html" class="cta-button">Get Custom Quote</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Specialized Services Pricing -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Specialized Services</h2>
-            <p class="section-subtitle">Additional eco-friendly cleaning services</p>
-
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div
-                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); text-align: center;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📦</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Move-In/Move-Out</h3>
-                    <div style="font-size: 2rem; color: var(--primary-green); font-weight: bold; margin-bottom: 1rem;">
-                        $349+</div>
-                    <p style="margin-bottom: 1rem;">Complete apartment/home cleaning for moves</p>
-                    <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
-                        <li>Inside cabinets & appliances</li>
-                        <li>Window cleaning</li>
-                        <li>Full bathroom sanitization</li>
-                    </ul>
-                </div>
-
-                <div
-                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); text-align: center;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛋️</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Upholstery Cleaning</h3>
-                    <div style="font-size: 2rem; color: var(--primary-green); font-weight: bold; margin-bottom: 1rem;">
-                        $89+</div>
-                    <p style="margin-bottom: 1rem;">Per piece of furniture</p>
-                    <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
-                        <li>Steam cleaning</li>
-                        <li>Stain removal</li>
-                        <li>Allergen elimination</li>
-                    </ul>
-                </div>
-
-                <div
-                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); text-align: center;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🦠</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Green Disinfection</h3>
-                    <div style="font-size: 2rem; color: var(--primary-green); font-weight: bold; margin-bottom: 1rem;">
-                        $199+</div>
-                    <p style="margin-bottom: 1rem;">Whole-home disinfection service</p>
-                    <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
-                        <li>Electrostatic spraying</li>
-                        <li>99.9% germ elimination</li>
-                        <li>Chemical-free disinfectants</li>
-                    </ul>
-                </div>
-
-                <div
-                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); text-align: center;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎉</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Event Cleanup</h3>
-                    <div style="font-size: 2rem; color: var(--primary-green); font-weight: bold; margin-bottom: 1rem;">
-                        $299+</div>
-                    <p style="margin-bottom: 1rem;">Pre and post-event cleaning</p>
-                    <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
-                        <li>Setup preparation</li>
-                        <li>During-event maintenance</li>
-                        <li>Complete cleanup</li>
-                    </ul>
-                </div>
-
-                <div
-                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); text-align: center;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔨</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Post-Construction</h3>
-                    <div style="font-size: 2rem; color: var(--primary-green); font-weight: bold; margin-bottom: 1rem;">
-                        $499+</div>
-                    <p style="margin-bottom: 1rem;">Construction cleanup service</p>
-                    <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
-                        <li>Dust and debris removal</li>
-                        <li>Surface preparation</li>
-                        <li>Final detailing</li>
-                    </ul>
-                </div>
-
-                <div
-                    style="background: white; border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); text-align: center;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌸</div>
-                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Allergy-Safe Cleaning</h3>
-                    <div style="font-size: 2rem; color: var(--primary-green); font-weight: bold; margin-bottom: 1rem;">
-                        $75+</div>
-                    <p style="margin-bottom: 1rem;">Add-on to any service</p>
-                    <ul style="text-align: center; padding: 0; font-size: 0.9rem; list-style-type: none;">
-                        <li>HEPA filtration</li>
-                        <li>Hypoallergenic products</li>
-                        <li>Allergen reduction focus</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Pricing Factors -->
     <section class="features">
@@ -451,8 +252,7 @@
             <h2 class="section-title">Factors That Affect Pricing</h2>
             <p class="section-subtitle">Transparent pricing based on your specific needs</p>
 
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+            <div class="grid-auto-fit-3" style="margin-top: 3rem;">
                 <div class="feature-card">
                     <div class="feature-icon">📏</div>
                     <h3>Square Footage</h3>
